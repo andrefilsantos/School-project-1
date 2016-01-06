@@ -1,0 +1,246 @@
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\aluno\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\tomas\Desktop\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V2\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V3\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\tomas\Desktop\M10_T01_N02_N25_V3_5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\aluno\Desktop\M10_T01_N02_N25_V4\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\André\Dropbox\Escola\Programação e Sistemas de Informação\Programação\M10\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\tomas\Desktop\Nova pasta\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V6_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\André\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V8_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V9_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\MariaFilipa\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V10_NEW_DESIGN_DONT_TOUCH\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\Administrator\Desktop\FOTOS_M10_T01_N02_N25_V12_NEW_DESIGN\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobreOClube.resources
+C:\Users\André\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobreOClube.resources
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V7_NEW_DESIGN\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\MariaFilipa\Desktop\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobreOClube.resources
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\Administrator\Desktop\New folder (2)\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobreOClube.resources
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\Administrator\Desktop\FINAL\M10_T01_N02_N25_V15_FINAL\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
