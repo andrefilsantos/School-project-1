@@ -181,12 +181,22 @@ namespace M10_T01_N02_N25
             lblLocalidade.Text = Clube.Pessoas[index].MoradaPessoa.Localidade;
             lblRua.Text = Clube.Pessoas[index].MoradaPessoa.Rua;
             lbl_codpost.Text = Clube.Pessoas[index].MoradaPessoa.CodigoPostal;
-            lblPeso.Text = Clube.Pessoas[index].GetSpecial();
+            if (Clube.Pessoas[index] is Atleta)
+            {
+                var atleta = (Atleta)Clube.Pessoas[index];
+                lblPeso.Text = "Peso: " + atleta.Peso + " Kg";
+            }
+            else if (Clube.Pessoas[index] is Socio)
+            {
+
+                var socio = (Socio)Clube.Pessoas[index];
+                lblPeso.Text = "Numero De Socio: " + socio.NumSocio;
+            }
             UpdateProfilePic(index);
         }
 
         //-----------------------------------------------------------
-        public void UpdateProfilePic(int index)
+        public void UpdateProfilePic(int index) //TODO: Refactor code
         {
             if (!File.Exists("ProfilePhotos/" + Clube.Pessoas[index].Nome + "_MF.jpg") && File.Exists("ProfilePhotos/" + Clube.Pessoas[index].Nome + ".jpg"))
             {

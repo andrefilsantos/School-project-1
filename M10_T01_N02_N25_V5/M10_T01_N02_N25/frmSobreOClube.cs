@@ -33,8 +33,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnEditarPresidente_Click(object sender, EventArgs e)
         {
-            var edit = new Editar("Editar", true);
-            edit.DadosPessoa = Clube.Presidente;
+            var edit = new Editar("Editar", true) { DadosPessoa = Clube.Presidente };
             var startName = Clube.Presidente.Nome;
             var result = edit.ShowDialog();
             if (result == DialogResult.OK)
@@ -100,8 +99,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnEditarTreinador_Click(object sender, EventArgs e)
         {
-            var edit = new Editar("Editar", true);
-            edit.DadosPessoa = Atleta.Treinador;
+            var edit = new Editar("Editar", true) { DadosPessoa = Atleta.Treinador };
             var startName = Atleta.Treinador.Nome;
             var result = edit.ShowDialog();
             if (result == DialogResult.OK)

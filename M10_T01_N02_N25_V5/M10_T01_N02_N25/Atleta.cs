@@ -25,12 +25,6 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        public override string GetSpecial()
-        {
-            return "Peso: " + _peso;
-        }
-
-        //-----------------------------------------------------------
         static Atleta()
         {
             Treinador = new Atleta("Rui Carlos Pinho da Vitória", new DateTime(1970, 04, 16), new Morada("Alverca do Ribatejo", "Vila Franca de Xira", "0000-000"), 78);
@@ -48,7 +42,8 @@ namespace M10_T01_N02_N25
             //-----------------------------------------------------------
             set
             {
-                _peso = value;
+                if (_peso > 0)
+                    _peso = value;
             }
         }
 

@@ -33,12 +33,6 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        public virtual string GetSpecial()
-        {
-            return "";
-        }
-
-        //-----------------------------------------------------------
         int CalculaIdade()
         {
             var anos = DateTime.Now.Year - _dataNas.Year;
