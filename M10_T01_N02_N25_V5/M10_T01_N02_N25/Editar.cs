@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Diagnostics;
 
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
@@ -57,10 +50,12 @@ namespace M10_T01_N02_N25
             //-----------------------------------------------------------
             get
             {
-                var dados = new Pessoa();
-                dados.Nome = txtNome.Text;
-                dados.MoradaPessoa = new Morada(txbRua.Text, txbLocalidade.Text, txbCod_postal.Text);
-                dados.DataNasc = new DateTime();
+                var dados = new Pessoa
+                {
+                    Nome = txtNome.Text,
+                    MoradaPessoa = new Morada(txbRua.Text, txbLocalidade.Text, txbCod_postal.Text),
+                    DataNasc = new DateTime()
+                };
                 var converteuOk = DateTime.TryParse(mskData.Text, out _data);
 
                 if (converteuOk)
@@ -165,7 +160,7 @@ namespace M10_T01_N02_N25
                 IsSet?.Invoke(this, new EditarEventArgs(DadosPessoa, comboBoxTipo.SelectedIndex, 0));
                 return;
             }
-            var peso = Convert.ToDouble(tb_peso.Text);
+            var peso = Convert.ToDouble(tb_peso.Text); //TODO: Refactor the way we handle this
             IsSet?.Invoke(this, new EditarEventArgs(DadosPessoa, comboBoxTipo.SelectedIndex, Peso));
             // Uso de "?" do C# 6.0 menos que 19 é um roubo -- Tomás Pinto @legobrainiac e Andre Santos @andrefilsantos
         }

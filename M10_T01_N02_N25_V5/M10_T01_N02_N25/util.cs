@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 namespace M10_T01_N02_N25
 {
     //-----------------------------------------------------------
-    class util
+    class Util
     {
         //-----------------------------------------------------------
         public static void GC_CLEANUP()

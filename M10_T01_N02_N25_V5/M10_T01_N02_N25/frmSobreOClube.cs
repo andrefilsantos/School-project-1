@@ -45,7 +45,7 @@ namespace M10_T01_N02_N25
             }
             try
             {
-                util.GC_CLEANUP();
+                Util.GC_CLEANUP();
                 File.Move("ProfilePhotos/" + startName + "_MF.jpg", "ProfilePhotos/" + Clube.Presidente.Nome + "_MF.jpg");
 
             }
@@ -111,7 +111,7 @@ namespace M10_T01_N02_N25
             }
             try
             {
-                util.GC_CLEANUP();
+                Util.GC_CLEANUP();
                 File.Move("ProfilePhotos/" + startName + "_MF.jpg", "ProfilePhotos/" + Atleta.Treinador.Nome + "_MF.jpg");
 
             }

@@ -89,7 +89,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            util.GC_CLEANUP();
+            Util.GC_CLEANUP();
             var edit = new Editar("Editar", true);
             edit.ClearField();
             edit.DadosPessoa = Clube.Pessoas[lbMembros.SelectedIndex];
@@ -115,7 +115,7 @@ namespace M10_T01_N02_N25
             }
             try
             {
-                util.GC_CLEANUP();
+                Util.GC_CLEANUP();
                 File.Move("ProfilePhotos/" + startName + "_MF.jpg", "ProfilePhotos/" + Clube.Pessoas[lbMembros.SelectedIndex].Nome + "_MF.jpg");
 
             }
@@ -313,7 +313,7 @@ namespace M10_T01_N02_N25
             foreach (var item in Clube.Pessoas)
             {
                 picFotoPerfil.Image = new Bitmap(Resources.DefaultProfilePhoto);
-                util.GC_CLEANUP();
+                Util.GC_CLEANUP();
                 if (File.Exists("ProfilePhotos/" + item.Nome + "_MF.jpg"))
                     File.Delete("ProfilePhotos/" + item.Nome + "_MF.jpg");
             }
@@ -360,7 +360,7 @@ namespace M10_T01_N02_N25
 
         private void autoSaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("O Autosave encontra-se " + util.BoolToStringAdj(_autoSave) + ", pretende " + util.BoolToStringVrb(!_autoSave), "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            var res = MessageBox.Show("O Autosave encontra-se " + Util.BoolToStringAdj(_autoSave) + ", pretende " + Util.BoolToStringVrb(!_autoSave), "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (res == DialogResult.OK)
                 _autoSave = !_autoSave;
         }
