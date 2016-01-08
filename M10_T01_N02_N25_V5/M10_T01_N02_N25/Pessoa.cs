@@ -14,7 +14,7 @@ namespace M10_T01_N02_N25
     {
         //-----------------------------------------------------------
         public int Idade { get; private set; }
-        DateTime dataNas;
+        private DateTime _dataNas;
         public string Nome { get; set; }
         public Morada MoradaPessoa { get; set; }
 
@@ -22,16 +22,17 @@ namespace M10_T01_N02_N25
         public DateTime DataNasc
         {
             //-----------------------------------------------------------
-            get { return dataNas; }
+            get { return _dataNas; }
 
             //-----------------------------------------------------------
             set
             {
-                dataNas = value;
+                _dataNas = value;
                 Idade = CalculaIdade();
             }
         }
 
+        //-----------------------------------------------------------
         public virtual string GetSpecial()
         {
             return "";
@@ -40,9 +41,9 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         int CalculaIdade()
         {
-            int anos = DateTime.Now.Year - dataNas.Year;
+            var anos = DateTime.Now.Year - _dataNas.Year;
 
-            if (DateTime.Now.Month < dataNas.Month || (DateTime.Now.Month == dataNas.Month && DateTime.Now.Day < dataNas.Day))
+            if (DateTime.Now.Month < _dataNas.Month || (DateTime.Now.Month == _dataNas.Month && DateTime.Now.Day < _dataNas.Day))
                 anos--;
             return anos;
         }

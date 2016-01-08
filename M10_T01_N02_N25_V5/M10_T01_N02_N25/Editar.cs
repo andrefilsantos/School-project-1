@@ -17,9 +17,9 @@ namespace M10_T01_N02_N25
     public partial class Editar : Form
     {
         //-----------------------------------------------------------
-        DateTime data;
-        public int selected;
-        bool changePhoto = false;
+        private DateTime _data;
+        private bool _changePhoto = false;
+        public int Selected;
 
         //-----------------------------------------------------------
         public Editar(string nome, bool isEditar)
@@ -57,22 +57,22 @@ namespace M10_T01_N02_N25
             //-----------------------------------------------------------
             get
             {
-                Pessoa dados = new Pessoa();
+                var dados = new Pessoa();
                 dados.Nome = txtNome.Text;
                 dados.MoradaPessoa = new Morada(txbRua.Text, txbLocalidade.Text, txbCod_postal.Text);
                 dados.DataNasc = new DateTime();
-                bool ConverteuOK = DateTime.TryParse(mskData.Text, out data);
+                var converteuOk = DateTime.TryParse(mskData.Text, out _data);
 
-                if (ConverteuOK)
+                if (converteuOk)
                 {
-                    dados.DataNasc = data;
+                    dados.DataNasc = _data;
                 }
                 else
                 {
                     dados.DataNasc = DateTime.Now;
                     //oaef
                 }
-                if (changePhoto)
+                if (_changePhoto)
                 {
                     if (File.Exists("ProfilePhotos/" + dados.Nome + ".jpg"))
                     {
@@ -81,7 +81,7 @@ namespace M10_T01_N02_N25
                         GC.WaitForPendingFinalizers();
                         File.Delete("ProfilePhotos/" + dados.Nome + ".jpg");
                     }
-                    Bitmap image = new Bitmap(picFotoPerfil.Image);
+                    var image = new Bitmap(picFotoPerfil.Image);
                     image.Save("ProfilePhotos/" + dados.Nome + ".jpg");
                     MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -144,8 +144,8 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void comboBoxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selected = comboBoxTipo.SelectedIndex;
-            if (selected == 0)
+            Selected = comboBoxTipo.SelectedIndex;
+            if (Selected == 0)
             {
                 tb_peso.Enabled = true;
                 return;
@@ -182,7 +182,7 @@ namespace M10_T01_N02_N25
 
             if (string.IsNullOrEmpty(changeImg.FileName)) return;
             picFotoPerfil.Image = new Bitmap(changeImg.FileName);
-            changePhoto = true;
+            _changePhoto = true;
         }
 
         private void txbCod_postal_KeyPress(object sender, KeyPressEventArgs e)

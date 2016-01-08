@@ -13,21 +13,21 @@ namespace M10_T01_N02_N25
     {
         //-----------------------------------------------------------
         public static Pessoa Treinador { get; private set; }
-        double peso { get; set; }
+        private double _peso;
 
         //-----------------------------------------------------------
         public Atleta() { }
 
         //-----------------------------------------------------------
-        public Atleta(string _nome, DateTime _dateNasc, Morada _moradaPessoa, double _peso) : base(_nome, _dateNasc, _moradaPessoa)
+        public Atleta(string _nome, DateTime _dateNasc, Morada _moradaPessoa, double peso) : base(_nome, _dateNasc, _moradaPessoa)
         {
-            Peso = _peso;
+            _peso = peso;
         }
 
         //-----------------------------------------------------------
         public override string GetSpecial()
         {
-            return "Peso: " + peso;
+            return "Peso: " + _peso;
         }
 
         //-----------------------------------------------------------
@@ -42,13 +42,13 @@ namespace M10_T01_N02_N25
             //-----------------------------------------------------------
             get
             {
-                return peso;
+                return _peso;
             }
 
             //-----------------------------------------------------------
             set
             {
-                peso = value;
+                _peso = value;
             }
         }
 
@@ -57,7 +57,7 @@ namespace M10_T01_N02_N25
         {
             writer.WriteStartElement("Atleta");
             writer.WriteAttributeString("Nome", Nome);
-            writer.WriteAttributeString("Peso", peso.ToString());
+            writer.WriteAttributeString("Peso", _peso.ToString());
             writer.WriteAttributeString("Dia", DataNasc.Day.ToString());
             writer.WriteAttributeString("Mes", DataNasc.Month.ToString());
             writer.WriteAttributeString("Ano", DataNasc.Year.ToString());
@@ -72,10 +72,10 @@ namespace M10_T01_N02_N25
             var year = Convert.ToInt32(reader.GetAttribute("Ano"));
             var month = Convert.ToInt32(reader.GetAttribute("Mes"));
             var day = Convert.ToInt32(reader.GetAttribute("Dia"));
-            peso = Convert.ToInt32(reader.GetAttribute("Peso"));
+            _peso = Convert.ToInt32(reader.GetAttribute("Peso"));
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
-            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + peso);
+            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + _peso);
         }
 
         //-----------------------------------------------------------

@@ -7,7 +7,6 @@ using System.Xml;
 using System.Media;
 using System.IO;
 using M10_T01_N02_N25.Properties;
-using Message = Microsoft.Build.Tasks.Message;
 
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
@@ -16,18 +15,19 @@ namespace M10_T01_N02_N25
     public partial class MainForm : Form
     {
         //-----------------------------------------------------------
-        public Clube clube = new Clube();
-        Editar edit = new Editar("Editar", true);
-        Editar add = new Editar("Adicionar", false);
-        frmSobre sobre = new frmSobre();
-        frmPesquisa pesquisar = new frmPesquisa();
-        bool autoSave = false;
-        string filePath = "Clube.xml";
+        public Clube Clube = new Clube();
+        //-----------------------------------------------------------
+        private Editar _edit = new Editar("Editar", true);
+        private Editar _add = new Editar("Adicionar", false);
+        private frmSobre _sobre = new frmSobre();
+        private frmPesquisa _pesquisar = new frmPesquisa();
+        private bool _autoSave = false;
+        private string _filePath = "Clube.xml";
 
         //-----------------------------------------------------------
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         //-----------------------------------------------------------
@@ -38,9 +38,9 @@ namespace M10_T01_N02_N25
 
             Console.WriteLine(e.Index);
             if (e.Index == 0)
-                clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso));
+                Clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso));
             else if (e.Index == 1)
-                clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa));
+                Clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa));
 
             UpdateLB();
         }
@@ -53,9 +53,9 @@ namespace M10_T01_N02_N25
             clube.Add(new Atleta("Engenheiro José Sócrates", new DateTime(1957, 9, 6), new Morada("Nº 33 da rua abade faria", "Lisboa", "1900-003"), 87));
             clube.Add(new Socio("O Bob The Builder", new DateTime(1950, 3, 7), new Morada("Comboios", "Lisboa", "1923-02")));
             */
-            add.IsSet += IsDataSet;
+            _add.IsSet += IsDataSet;
 
-            if (File.Exists(filePath))
+            if (File.Exists(_filePath))
             {
                 Console.WriteLine("Loading Existing File...");
                 loadToolStripMenuItem.PerformClick();
@@ -68,7 +68,8 @@ namespace M10_T01_N02_N25
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SystemSounds.Exclamation.Play();
-            DialogResult result = MessageBox.Show("Tem a certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Tem a certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -80,33 +81,34 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            add.ClearField();
-            DialogResult result = add.ShowDialog();
-            add.Hide();
+            _add.ClearField();
+            DialogResult result = _add.ShowDialog();
+            _add.Hide();
         }
 
         //-----------------------------------------------------------
         private void btnEditar_Click(object sender, EventArgs e)
         {
             util.GC_CLEANUP();
-            Editar edit = new Editar("Editar", true);
+            var edit = new Editar("Editar", true);
             edit.ClearField();
-            edit.DadosPessoa = clube.Pessoas[lbMembros.SelectedIndex];
-            string startName = edit.DadosPessoa.Nome;
+            edit.DadosPessoa = Clube.Pessoas[lbMembros.SelectedIndex];
+            var startName = edit.DadosPessoa.Nome;
             DialogResult result = edit.ShowDialog();
+
             if (result == DialogResult.OK)
             {
-                if (clube.Pessoas[lbMembros.SelectedIndex] is Atleta)
+                if (Clube.Pessoas[lbMembros.SelectedIndex] is Atleta)
                 {
-                    Atleta bystander = new Atleta(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa, 0);
-                    clube.Pessoas[lbMembros.SelectedIndex] = bystander;
+                    var bystander = new Atleta(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa, 0);
+                    Clube.Pessoas[lbMembros.SelectedIndex] = bystander;
                     UpdateDados(lbMembros.SelectedIndex);
                     Console.WriteLine("Hi 1");
                 }
-                else if (clube.Pessoas[lbMembros.SelectedIndex] is Socio)
+                else if (Clube.Pessoas[lbMembros.SelectedIndex] is Socio)
                 {
-                    Socio bystander = new Socio(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa);
-                    clube.Pessoas[lbMembros.SelectedIndex] = bystander;
+                    var bystander = new Socio(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa);
+                    Clube.Pessoas[lbMembros.SelectedIndex] = bystander;
                     UpdateDados(lbMembros.SelectedIndex);
                     Console.WriteLine("Hi 2");
                 }
@@ -114,13 +116,12 @@ namespace M10_T01_N02_N25
             try
             {
                 util.GC_CLEANUP();
-                File.Move("ProfilePhotos/" + startName + "_MF.jpg", "ProfilePhotos/" + clube.Pessoas[lbMembros.SelectedIndex].Nome + "_MF.jpg");
+                File.Move("ProfilePhotos/" + startName + "_MF.jpg", "ProfilePhotos/" + Clube.Pessoas[lbMembros.SelectedIndex].Nome + "_MF.jpg");
 
             }
             catch (Exception)
             {
                 MessageBox.Show("Erro...", "", MessageBoxButtons.OK);
-                throw;
             }
 
             UpdateLB();
@@ -129,13 +130,14 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void UpdateLB()
         {
-            List<string> pessoasString = new List<string>();
+            var pessoasString = new List<string>();
             pessoasString.Clear();
-            foreach (var item in clube.Pessoas)
+            foreach (var item in Clube.Pessoas)
             {
                 pessoasString.Add(item.ToString());
             }
             lbMembros.DataSource = pessoasString;
+
             if (pessoasString.Count == 0)
             {
                 lblVazio.Visible = true;
@@ -150,7 +152,7 @@ namespace M10_T01_N02_N25
             {
                 lblVazio.Visible = false;
             }
-            if (autoSave && clube.Pessoas.Count > 0)
+            if (_autoSave && Clube.Pessoas.Count > 0)
             {
                 saveToolStripMenuItem.PerformClick();
             }
@@ -159,13 +161,13 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            XmlWriterSettings settings = new XmlWriterSettings();
+            var settings = new XmlWriterSettings();
             settings.Indent = true;
 
-            using (XmlWriter writer = XmlWriter.Create(filePath, settings))
+            using (var writer = XmlWriter.Create(_filePath, settings))
             {
                 writer.WriteStartDocument();
-                clube.Write(writer);
+                Clube.Write(writer);
                 writer.WriteEndDocument();
             }
             Console.WriteLine("End Save...");
@@ -174,26 +176,26 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         public void UpdateDados(int index)
         {
-            lblNome.Text = "Nome: " + clube.Pessoas[index].Nome;
-            lblIdade.Text = "Idade: " + clube.Pessoas[index].Idade.ToString() + " Ano/s";
-            lblLocalidade.Text = clube.Pessoas[index].MoradaPessoa.Localidade;
-            lblRua.Text = clube.Pessoas[index].MoradaPessoa.Rua;
-            lbl_codpost.Text = clube.Pessoas[index].MoradaPessoa.CodigoPostal;
-            lblPeso.Text = clube.Pessoas[index].GetSpecial();
+            lblNome.Text = "Nome: " + Clube.Pessoas[index].Nome;
+            lblIdade.Text = "Idade: " + Clube.Pessoas[index].Idade.ToString() + " Ano/s";
+            lblLocalidade.Text = Clube.Pessoas[index].MoradaPessoa.Localidade;
+            lblRua.Text = Clube.Pessoas[index].MoradaPessoa.Rua;
+            lbl_codpost.Text = Clube.Pessoas[index].MoradaPessoa.CodigoPostal;
+            lblPeso.Text = Clube.Pessoas[index].GetSpecial();
             UpdateProfilePic(index);
         }
 
         //-----------------------------------------------------------
         public void UpdateProfilePic(int index)
         {
-            if (!File.Exists("ProfilePhotos/" + clube.Pessoas[index].Nome + "_MF.jpg") && File.Exists("ProfilePhotos/" + clube.Pessoas[index].Nome + ".jpg"))
+            if (!File.Exists("ProfilePhotos/" + Clube.Pessoas[index].Nome + "_MF.jpg") && File.Exists("ProfilePhotos/" + Clube.Pessoas[index].Nome + ".jpg"))
             {
-                File.Copy("ProfilePhotos/" + clube.Pessoas[index].Nome + ".jpg", "ProfilePhotos/" + clube.Pessoas[index].Nome + "_MF.jpg");
+                File.Copy("ProfilePhotos/" + Clube.Pessoas[index].Nome + ".jpg", "ProfilePhotos/" + Clube.Pessoas[index].Nome + "_MF.jpg");
                 return;
             }
 
-            if (File.Exists("ProfilePhotos/" + clube.Pessoas[index].Nome + "_MF.jpg"))
-                picFotoPerfil.Image = new Bitmap("ProfilePhotos/" + clube.Pessoas[index].Nome + "_MF.jpg");
+            if (File.Exists("ProfilePhotos/" + Clube.Pessoas[index].Nome + "_MF.jpg"))
+                picFotoPerfil.Image = new Bitmap("ProfilePhotos/" + Clube.Pessoas[index].Nome + "_MF.jpg");
             else
                 picFotoPerfil.Image = new Bitmap(Resources.DefaultProfilePhoto);
         }
@@ -237,7 +239,6 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnFstReg_Click(object sender, EventArgs e)
         {
-
             try
             {
                 lbMembros.SelectedIndex = 0;
@@ -262,7 +263,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnNxtReg_Click(object sender, EventArgs e)
         {
-            if (lbMembros.SelectedIndex != clube.Pessoas.Count - 1)
+            if (lbMembros.SelectedIndex != Clube.Pessoas.Count - 1)
             {
                 UpdateDados(lbMembros.SelectedIndex += 1);
             }
@@ -271,14 +272,8 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnLatReg_Click(object sender, EventArgs e)
         {
-            lbMembros.SelectedIndex = clube.Pessoas.Count() - 1;
+            lbMembros.SelectedIndex = Clube.Pessoas.Count() - 1;
             //UpdateDados(0);
-        }
-
-        //-----------------------------------------------------------
-        private void lblEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //Process.Start("mailto:" + clube.Pessoas[lbMembros.SelectedIndex].Email);
         }
 
         //-----------------------------------------------------------
@@ -286,7 +281,7 @@ namespace M10_T01_N02_N25
         {
             try
             {
-                clube.Pessoas.RemoveRange(lbMembros.SelectedIndex, 1);
+                Clube.Pessoas.RemoveRange(lbMembros.SelectedIndex, 1);
                 UpdateLB();
             }
             catch
@@ -298,14 +293,14 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnRemAll_Click(object sender, EventArgs e)
         {
-            clube.Pessoas.Clear();
+            Clube.Pessoas.Clear();
             UpdateLB();
         }
 
         //-----------------------------------------------------------
         public void RemoveDuplicates()
         {
-            foreach (var item in clube.Pessoas)
+            foreach (var item in Clube.Pessoas)
             {
                 picFotoPerfil.Image = new Bitmap(Resources.DefaultProfilePhoto);
                 util.GC_CLEANUP();
@@ -322,19 +317,19 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void tsmPesquisa_Click(object sender, EventArgs e)
         {
-            pesquisar.ShowDialog();
+            _pesquisar.ShowDialog();
         }
 
         //-----------------------------------------------------------
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (XmlReader reader = XmlReader.Create(filePath))
+            using (var reader = XmlReader.Create(_filePath))
             {
                 while (reader.Read())
                 {
                     if (reader.NodeType == XmlNodeType.Element && reader.Name == "Clube")
                     {
-                        clube.Read(reader);
+                        Clube.Read(reader);
                     }
                 }
             }
@@ -344,20 +339,20 @@ namespace M10_T01_N02_N25
 
         private void clubeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSobreOClube sbClube = new frmSobreOClube();
+            var sbClube = new frmSobreOClube();
             sbClube.ShowDialog();
         }
 
         private void programaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sobre.ShowDialog();
+            _sobre.ShowDialog();
         }
 
         private void autoSaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("O Autosave encontra-se " + util.BoolToStringAdj(autoSave) + ", pretende " + util.BoolToStringVrb(!autoSave), "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            var res = MessageBox.Show("O Autosave encontra-se " + util.BoolToStringAdj(_autoSave) + ", pretende " + util.BoolToStringVrb(!_autoSave), "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (res == DialogResult.OK)
-                autoSave = !autoSave;
+                _autoSave = !_autoSave;
         }
     }
 }

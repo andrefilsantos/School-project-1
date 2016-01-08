@@ -16,12 +16,12 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         public static Pessoa Presidente { get; private set; }
         public static string Nome { get; private set; }
-        List<Pessoa> pessoas = new List<Pessoa>();
+        private List<Pessoa> _pessoas = new List<Pessoa>();
 
         //-----------------------------------------------------------
         public void Add(Pessoa bystander)
         {
-            pessoas.Add(bystander);
+            _pessoas.Add(bystander);
         }
 
         //-----------------------------------------------------------
@@ -33,7 +33,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         public List<Pessoa> Pessoas
         {
-            get { return pessoas; }
+            get { return _pessoas; }
         }
 
         //-----------------------------------------------------------
@@ -50,7 +50,7 @@ namespace M10_T01_N02_N25
         public void Write(XmlWriter writer)
         {
             writer.WriteStartElement("Clube");
-            foreach (var item in pessoas)
+            foreach (var item in _pessoas)
             {
                 item.Write(writer);
 
@@ -69,17 +69,17 @@ namespace M10_T01_N02_N25
                     case "Atleta":
                         Atleta at = new Atleta();
                         at.Read(reader);
-                        pessoas.Add(at);
+                        _pessoas.Add(at);
                         break;
                     case "Pessoa":
                         Pessoa ps = new Pessoa();
                         ps.Read(reader);
-                        pessoas.Add(ps);
+                        _pessoas.Add(ps);
                         break;
                     case "Socio":
                         Socio sc = new Socio();
                         sc.Read(reader);
-                        pessoas.Add(sc);
+                        _pessoas.Add(sc);
                         break;
                 }
             }

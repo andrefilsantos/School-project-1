@@ -2,4 +2,5 @@
 <Clube>
   <Socio Nome="Tomas" CodSocio="4" Dia="4" Mes="9" Ano="1999" Rua="Candido dos reis" Localidade="Viseu" CodigoPostoal="3510-057" />
   <Atleta Nome="Nicolas Gaitan" Peso="60" Dia="28" Mes="2" Ano="1988" Rua="Rua do Gaitan" Localidade="Lisboa" CodigoPostoal="1234-566" />
+  <Atleta Nome="Tomáss" Peso="69" Dia="4" Mes="9" Ano="1999" Rua="s" Localidade="s" CodigoPostoal="3510-057" />
 </Clube>

@@ -12,27 +12,27 @@ namespace M10_T01_N02_N25
     sealed class Socio : Pessoa 
     {
         //-----------------------------------------------------------
-        private static int sociosCount = 0;
-        private int numSocio;
+        private static int _sociosCount = 0;
+        private int _numSocio;
         
         //-----------------------------------------------------------
         public Socio(string _nome, DateTime _dateNasc, Morada _moradaPessoa) : base(_nome, _dateNasc, _moradaPessoa)
         {
-            numSocio = sociosCount + 1;
-            sociosCount++;
+            _numSocio = _sociosCount + 1;
+            _sociosCount++;
         }
 
         //-----------------------------------------------------------
         public Socio()
         {
-            numSocio = sociosCount + 1;
-            sociosCount++;
+            _numSocio = _sociosCount + 1;
+            _sociosCount++;
         }
 
         //-----------------------------------------------------------
         public override string GetSpecial()
         {
-            return "Nº Socio: " + numSocio;
+            return "Nº Socio: " + _numSocio;
         }
 
         //-----------------------------------------------------------
@@ -41,7 +41,7 @@ namespace M10_T01_N02_N25
             //-----------------------------------------------------------
             get
             {
-                return numSocio; //Effectively making it read only
+                return _numSocio; //Effectively making it read only
             }
 
         }
@@ -57,7 +57,7 @@ namespace M10_T01_N02_N25
         {
             writer.WriteStartElement("Socio");
             writer.WriteAttributeString("Nome", Nome);
-            writer.WriteAttributeString("CodSocio", numSocio.ToString());
+            writer.WriteAttributeString("CodSocio", _numSocio.ToString());
             writer.WriteAttributeString("Dia", DataNasc.Day.ToString());
             writer.WriteAttributeString("Mes", DataNasc.Month.ToString());
             writer.WriteAttributeString("Ano", DataNasc.Year.ToString());
@@ -72,14 +72,14 @@ namespace M10_T01_N02_N25
             var year = Convert.ToInt32(reader.GetAttribute("Ano"));
             var month = Convert.ToInt32(reader.GetAttribute("Mes"));
             var day = Convert.ToInt32(reader.GetAttribute("Dia"));
-            numSocio = Convert.ToInt32(reader.GetAttribute("CodSocio"));
-            if (numSocio > sociosCount)
+            _numSocio = Convert.ToInt32(reader.GetAttribute("CodSocio"));
+            if (_numSocio > _sociosCount)
             {
-                sociosCount = numSocio;
+                _sociosCount = _numSocio;
             }
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
-            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + numSocio);
+            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + _numSocio);
         }
 
     }
