@@ -368,6 +368,11 @@ namespace M10_T01_N02_N25
         {
             pesquisa.Show();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pesquisaToolStripMenuItem.PerformClick();
+        }
     }
 }
 

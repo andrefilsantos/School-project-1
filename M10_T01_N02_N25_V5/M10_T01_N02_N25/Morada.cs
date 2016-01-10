@@ -45,7 +45,6 @@ namespace M10_T01_N02_N25
 
         {
             return Rua + "\n" + Localidade + "\n" + CodigoPostal;
-            //cenas
         }
 
         public void Read(XmlReader reader) 

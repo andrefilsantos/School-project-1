@@ -46,6 +46,7 @@
             this.tsmSobre = new System.Windows.Forms.ToolStripMenuItem();
             this.clubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesquisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnFstReg = new System.Windows.Forms.Button();
             this.btnPrevReg = new System.Windows.Forms.Button();
             this.btnNxtReg = new System.Windows.Forms.Button();
@@ -59,7 +60,7 @@
             this.btnSobreClube = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblVazio = new System.Windows.Forms.Label();
-            this.pesquisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.grpMorada.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tbpgDadosPessoais.SuspendLayout();
@@ -236,6 +237,13 @@
             this.programaToolStripMenuItem.Text = "Programa";
             this.programaToolStripMenuItem.Click += new System.EventHandler(this.programaToolStripMenuItem_Click);
             // 
+            // pesquisaToolStripMenuItem
+            // 
+            this.pesquisaToolStripMenuItem.Name = "pesquisaToolStripMenuItem";
+            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.pesquisaToolStripMenuItem.Text = "Pesquisa";
+            this.pesquisaToolStripMenuItem.Click += new System.EventHandler(this.pesquisaToolStripMenuItem_Click);
+            // 
             // btnFstReg
             // 
             this.btnFstReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -391,18 +399,24 @@
             this.lblVazio.Text = "Não há membros na lista.";
             this.lblVazio.Visible = false;
             // 
-            // pesquisaToolStripMenuItem
+            // btnPesquisar
             // 
-            this.pesquisaToolStripMenuItem.Name = "pesquisaToolStripMenuItem";
-            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.pesquisaToolStripMenuItem.Text = "Pesquisa";
-            this.pesquisaToolStripMenuItem.Click += new System.EventHandler(this.pesquisaToolStripMenuItem_Click);
+            this.btnPesquisar.Image = global::M10_T01_N02_N25.Properties.Resources.search;
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(127, 424);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(115, 35);
+            this.btnPesquisar.TabIndex = 16;
+            this.btnPesquisar.Text = "Pesquisa";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 473);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.lblVazio);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnSobreClube);
@@ -469,6 +483,7 @@
         private System.Windows.Forms.ToolStripMenuItem programaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoSaveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pesquisaToolStripMenuItem;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }
 
