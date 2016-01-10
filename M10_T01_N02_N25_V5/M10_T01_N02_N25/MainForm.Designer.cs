@@ -59,6 +59,7 @@
             this.btnSobreClube = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblVazio = new System.Windows.Forms.Label();
+            this.pesquisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpMorada.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tbpgDadosPessoais.SuspendLayout();
@@ -170,7 +171,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
-            this.tsmSobre});
+            this.tsmSobre,
+            this.pesquisaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(895, 24);
@@ -389,6 +391,13 @@
             this.lblVazio.Text = "Não há membros na lista.";
             this.lblVazio.Visible = false;
             // 
+            // pesquisaToolStripMenuItem
+            // 
+            this.pesquisaToolStripMenuItem.Name = "pesquisaToolStripMenuItem";
+            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.pesquisaToolStripMenuItem.Text = "Pesquisa";
+            this.pesquisaToolStripMenuItem.Click += new System.EventHandler(this.pesquisaToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,6 +468,7 @@
         private System.Windows.Forms.ToolStripMenuItem clubeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoSaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pesquisaToolStripMenuItem;
     }
 }
 

@@ -20,7 +20,7 @@ namespace M10_T01_N02_N25
         private Editar _edit = new Editar("Editar", true);
         private Editar _add = new Editar("Adicionar", false);
         private frmSobre _sobre = new frmSobre();
-        private frmPesquisa _pesquisar = new frmPesquisa();
+        private frmPesquisa pesquisa;
         private bool _autoSave = false;
         private string _filePath = "Clube.xml";
 
@@ -42,6 +42,8 @@ namespace M10_T01_N02_N25
             else if (e.Index == 1)
                 Clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa));
 
+            form.ClearField();
+            form.Hide();
             UpdateLB();
         }
 
@@ -62,6 +64,7 @@ namespace M10_T01_N02_N25
             }
 
             UpdateLB();
+            pesquisa = new frmPesquisa(ref Clube);
         }
 
         //-----------------------------------------------------------
@@ -81,9 +84,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            _add.ClearField();
-            DialogResult result = _add.ShowDialog();
-            _add.Hide();
+            _add.ShowDialog();
         }
 
         //-----------------------------------------------------------
@@ -325,12 +326,6 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        private void tsmPesquisa_Click(object sender, EventArgs e)
-        {
-            _pesquisar.ShowDialog();
-        }
-
-        //-----------------------------------------------------------
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var reader = XmlReader.Create(_filePath))
@@ -347,22 +342,31 @@ namespace M10_T01_N02_N25
             Console.WriteLine("End Load...");
         }
 
+        //-----------------------------------------------------------
         private void clubeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var sbClube = new frmSobreOClube();
             sbClube.ShowDialog();
         }
 
+        //-----------------------------------------------------------
         private void programaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _sobre.ShowDialog();
         }
 
+        //-----------------------------------------------------------
         private void autoSaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var res = MessageBox.Show("O Autosave encontra-se " + Util.BoolToStringAdj(_autoSave) + ", pretende " + Util.BoolToStringVrb(!_autoSave), "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (res == DialogResult.OK)
                 _autoSave = !_autoSave;
+        }
+
+        //-----------------------------------------------------------
+        private void pesquisaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pesquisa.Show();
         }
     }
 }

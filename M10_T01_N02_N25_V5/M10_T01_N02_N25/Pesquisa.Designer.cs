@@ -33,7 +33,7 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pnlbckResultados = new System.Windows.Forms.Panel();
-            this.lblResultados = new System.Windows.Forms.Label();
+            this.listBoxResultados = new System.Windows.Forms.ListBox();
             this.pnlbckResultados.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +44,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(774, 26);
             this.txtPesquisa.TabIndex = 0;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // btnPesquisar
             // 
@@ -74,19 +75,19 @@
             // pnlbckResultados
             // 
             this.pnlbckResultados.BackColor = System.Drawing.Color.White;
-            this.pnlbckResultados.Controls.Add(this.lblResultados);
+            this.pnlbckResultados.Controls.Add(this.listBoxResultados);
             this.pnlbckResultados.Location = new System.Drawing.Point(13, 50);
             this.pnlbckResultados.Name = "pnlbckResultados";
             this.pnlbckResultados.Size = new System.Drawing.Size(773, 258);
             this.pnlbckResultados.TabIndex = 16;
             // 
-            // lblResultados
+            // listBoxResultados
             // 
-            this.lblResultados.Location = new System.Drawing.Point(4, 4);
-            this.lblResultados.Name = "lblResultados";
-            this.lblResultados.Size = new System.Drawing.Size(766, 233);
-            this.lblResultados.TabIndex = 0;
-            this.lblResultados.Text = "Resultados da Pesquisa...";
+            this.listBoxResultados.FormattingEnabled = true;
+            this.listBoxResultados.Location = new System.Drawing.Point(4, 4);
+            this.listBoxResultados.Name = "listBoxResultados";
+            this.listBoxResultados.Size = new System.Drawing.Size(766, 238);
+            this.listBoxResultados.TabIndex = 0;
             // 
             // frmPesquisa
             // 
@@ -104,6 +105,7 @@
             this.Name = "frmPesquisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pesquisa";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPesquisa_FormClosing);
             this.Load += new System.EventHandler(this.frmPesquisa_Load);
             this.pnlbckResultados.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -117,6 +119,6 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Panel pnlbckResultados;
-        private System.Windows.Forms.Label lblResultados;
+        private System.Windows.Forms.ListBox listBoxResultados;
     }
 }
