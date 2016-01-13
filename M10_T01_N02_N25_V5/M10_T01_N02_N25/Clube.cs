@@ -67,17 +67,17 @@ namespace M10_T01_N02_N25
                 switch (reader.Name)
                 {
                     case "Atleta":
-                        Atleta at = new Atleta();
+                        var at = new Atleta();
                         at.Read(reader);
                         _pessoas.Add(at);
                         break;
                     case "Pessoa":
-                        Pessoa ps = new Pessoa();
+                        var ps = new Pessoa();
                         ps.Read(reader);
                         _pessoas.Add(ps);
                         break;
                     case "Socio":
-                        Socio sc = new Socio();
+                        var sc = new Socio();
                         sc.Read(reader);
                         _pessoas.Add(sc);
                         break;

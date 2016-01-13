@@ -260,3 +260,16 @@ C:\Users\Administrator\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_
 C:\Users\André\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
 C:\Users\André\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
 C:\Users\André\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe.config
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.exe
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\bin\Debug\M10_T01_N02_N25.pdb
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csprojResolveAssemblyReference.cache
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Editar.resources
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobre.resources
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmSobreOClube.resources
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.MainForm.resources
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmPesquisa.resources
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.Properties.Resources.resources
+C:\Users\tomas\Documents\GitHub\School-project-1\M10_T01_N02_N25_V5\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache

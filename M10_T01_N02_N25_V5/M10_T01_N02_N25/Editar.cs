@@ -18,16 +18,9 @@ namespace M10_T01_N02_N25
         public Editar(string nome, bool isEditar)
         {
             InitializeComponent();
-            this.Text = nome;
+            Text = nome;
             comboBoxTipo.SelectedIndex = 0;
             comboBoxTipo.Enabled = !isEditar;
-        }
-
-        //-----------------------------------------------------------
-        void Rename(string fileOg, string after)
-        {
-            File.Copy(fileOg, after);
-            File.Delete(fileOg);
         }
 
         //-----------------------------------------------------------
@@ -160,7 +153,6 @@ namespace M10_T01_N02_N25
                 IsSet?.Invoke(this, new EditarEventArgs(DadosPessoa, comboBoxTipo.SelectedIndex, 0));
                 return;
             }
-            var peso = Convert.ToDouble(tb_peso.Text); //TODO: Refactor the way we handle this
             IsSet?.Invoke(this, new EditarEventArgs(DadosPessoa, comboBoxTipo.SelectedIndex, Peso));
             // Uso de "?" do C# 6.0 menos que 19 é um roubo -- Tomás Pinto @legobrainiac e Andre Santos @andrefilsantos
         }
@@ -174,7 +166,6 @@ namespace M10_T01_N02_N25
                 Filter = "Apenas Imagens. |*jpg"
             };
             var dr = changeImg.ShowDialog();
-
             if (string.IsNullOrEmpty(changeImg.FileName)) return;
             picFotoPerfil.Image = new Bitmap(changeImg.FileName);
             _changePhoto = true;

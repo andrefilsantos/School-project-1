@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
+//I dont want to set the world on fire
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
 {
@@ -20,8 +21,7 @@ namespace M10_T01_N02_N25
         public static string BoolToStringStatus(bool val) => val ? "Enable" : "Disable";
     }
 
-
-    //-----------------------------------------------------------
+    //-----------------------------------------------------------0
     public delegate void IsSetHandler(object sender, EditarEventArgs e);
 }
 

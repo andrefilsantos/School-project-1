@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //-----------------------------------------------------------
@@ -20,7 +14,6 @@ namespace M10_T01_N02_N25
         {
             InitializeComponent();
             _clube = clube;
-            Console.WriteLine(_clube.Pessoas.Count);
         }
 
         //-----------------------------------------------------------
@@ -73,7 +66,6 @@ namespace M10_T01_N02_N25
                 resultados.Add(_clube.Pessoas[index].ToString());
             }
             listBoxResultados.DataSource = resultados;
-            Console.WriteLine("//-----------------------------------------------------------");
         }
 
         private void frmPesquisa_FormClosing(object sender, FormClosingEventArgs e)

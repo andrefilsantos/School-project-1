@@ -182,6 +182,7 @@ namespace M10_T01_N02_N25
             lblLocalidade.Text = Clube.Pessoas[index].MoradaPessoa.Localidade;
             lblRua.Text = Clube.Pessoas[index].MoradaPessoa.Rua;
             lbl_codpost.Text = Clube.Pessoas[index].MoradaPessoa.CodigoPostal;
+
             if (Clube.Pessoas[index] is Atleta)
             {
                 var atleta = (Atleta)Clube.Pessoas[index];
@@ -284,7 +285,6 @@ namespace M10_T01_N02_N25
         private void btnLatReg_Click(object sender, EventArgs e)
         {
             lbMembros.SelectedIndex = Clube.Pessoas.Count() - 1;
-            //UpdateDados(0);
         }
 
         //-----------------------------------------------------------
@@ -375,8 +375,3 @@ namespace M10_T01_N02_N25
         }
     }
 }
-
-
-
-//pessoas.Add(new Atleta("Engenheiro José Sócrates", new DateTime(1957,9,6), new Morada("Nº 33 da rua abade faria","Lisboa", "1900-003"), 87));
-//pessoas.Add(new Socio("Doutor Passos Coelho", new DateTime(1964, 7, 24), new Morada("Sé Nova", "Coimbra", "6969-069")));
