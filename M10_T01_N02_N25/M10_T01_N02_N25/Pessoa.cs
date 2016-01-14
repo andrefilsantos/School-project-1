@@ -17,6 +17,8 @@ namespace M10_T01_N02_N25
         private DateTime _dataNas;
         public string Nome { get; set; }
         public Morada MoradaPessoa { get; set; }
+        public bool Active { get; set; }
+        protected bool IsActive = true;
 
         //-----------------------------------------------------------
         public DateTime DataNasc
@@ -53,12 +55,13 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        public Pessoa(string _nome, DateTime _dateNasc, Morada _moradaPessoa)
+        public Pessoa(string _nome, DateTime _dateNasc, Morada _moradaPessoa, bool _active)
         {
             Nome = _nome;
             DataNasc = _dateNasc;
             MoradaPessoa = _moradaPessoa; ;
             Idade = CalculaIdade();
+            Active = _active;
         }
 
         //-----------------------------------------------------------
@@ -76,6 +79,7 @@ namespace M10_T01_N02_N25
             var day = Convert.ToInt32(reader.GetAttribute("Dia"));
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
+            IsActive = Convert.ToBoolean(reader.GetAttribute("Active"));
             Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal);
         }
 
@@ -88,6 +92,7 @@ namespace M10_T01_N02_N25
             writer.WriteAttributeString("Mes", DataNasc.Month.ToString());
             writer.WriteAttributeString("Dia", DataNasc.Day.ToString());
             MoradaPessoa.Write(writer);
+            writer.WriteAttributeString("Active", Active.ToString());
             writer.WriteEndElement();
         }
     }

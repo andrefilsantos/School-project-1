@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Clube>
-  <Socio Nome="Tomas" CodSocio="4" Dia="4" Mes="9" Ano="1999" Rua="Candido dos reis" Localidade="Viseu" CodigoPostoal="3510-057" />
-  <Atleta Nome="Nicolas Gaitan" Peso="60" Dia="28" Mes="2" Ano="1988" Rua="Rua do Gaitan" Localidade="Lisboa" CodigoPostoal="1234-566" />
-  <Atleta Nome="Tomáss" Peso="69" Dia="4" Mes="9" Ano="1999" Rua="s" Localidade="s" CodigoPostoal="3510-057" />
-  <Socio Nome="Tomas" CodSocio="4" Dia="4" Mes="9" Ano="1999" Rua="Candido dos reis" Localidade="Viseu" CodigoPostoal="3510-057" />
-  <Atleta Nome="Nicolas Gaitan" Peso="60" Dia="28" Mes="2" Ano="1988" Rua="Rua do Gaitan" Localidade="Lisboa" CodigoPostoal="1234-566" />
-  <Atleta Nome="Tomáss" Peso="69" Dia="4" Mes="9" Ano="1999" Rua="s" Localidade="s" CodigoPostoal="3510-057" />
+  <Pessoa Nome="Coiso Manel" Ano="1572" Mes="12" Dia="19" Rua="Marte" Localidade="Cratera 3" CodigoPostoal="1900-003" />
+  <Atleta Nome="Engenheiro José Sócrates" Peso="87" Dia="6" Mes="9" Ano="1957" Rua="Nº 33 da rua abade faria" Localidade="Lisboa" CodigoPostoal="1900-003" Active="False" />
+  <Socio Nome="O Bob The Builder" CodSocio="2" Dia="7" Mes="3" Ano="1950" Rua="Comboios" Localidade="Lisboa" CodigoPostoal="1923-02" Active="True" />
+  <Atleta Nome="Diogo Pais" Peso="50" Dia="14" Mes="1" Ano="2016" Rua="Rua do Hitler" Localidade="Localidade do Hitle" CodigoPostoal="5478-585" Active="True" />
 </Clube>

@@ -16,7 +16,7 @@ namespace M10_T01_N02_N25
         private int _numSocio;
 
         //-----------------------------------------------------------
-        public Socio(string _nome, DateTime _dateNasc, Morada _moradaPessoa) : base(_nome, _dateNasc, _moradaPessoa)
+        public Socio(string _nome, DateTime _dateNasc, Morada _moradaPessoa, bool _active) : base(_nome, _dateNasc, _moradaPessoa, _active)
         {
             _numSocio = _sociosCount + 1;
             _sociosCount++;
@@ -51,11 +51,12 @@ namespace M10_T01_N02_N25
             writer.WriteAttributeString("Mes", DataNasc.Month.ToString());
             writer.WriteAttributeString("Ano", DataNasc.Year.ToString());
             MoradaPessoa.Write(writer);
+            writer.WriteAttributeString("Active", Active.ToString());
             writer.WriteEndElement();
         }
 
         //-----------------------------------------------------------
-        public override void Read(XmlReader reader)
+        public override void Read(XmlReader reader) //BUG: Loading is not working...
         {
             Nome = reader.GetAttribute("Nome");
             var year = Convert.ToInt32(reader.GetAttribute("Ano"));
@@ -68,6 +69,7 @@ namespace M10_T01_N02_N25
             }
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
+            IsActive = Convert.ToBoolean(reader.GetAttribute("Active"));
             Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + _numSocio);
         }
 

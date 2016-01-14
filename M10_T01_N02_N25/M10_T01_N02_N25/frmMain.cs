@@ -16,6 +16,8 @@ namespace M10_T01_N02_N25
 {
     public partial class frmMain : Form
     {
+        //TODO: Redo load code
+
         //-----------------------------------------------------------
         public Clube Clube = new Clube();
         //-----------------------------------------------------------
@@ -34,11 +36,9 @@ namespace M10_T01_N02_N25
 
         private void formMain_Load(object sender, EventArgs e)
         {
-            /*
-              clube.Add(new Pessoa("Coiso Manel", new DateTime(1572, 12, 19), new Morada("Marte", "Cratera 3", "1900-003")));
-              clube.Add(new Atleta("Engenheiro José Sócrates", new DateTime(1957, 9, 6), new Morada("Nº 33 da rua abade faria", "Lisboa", "1900-003"), 87));
-              clube.Add(new Socio("O Bob The Builder", new DateTime(1950, 3, 7), new Morada("Comboios", "Lisboa", "1923-02")));
-              */
+            /*Clube.Add(new Pessoa("Coiso Manel", new DateTime(1572, 12, 19), new Morada("Marte", "Cratera 3", "1900-003"), true));
+            Clube.Add(new Atleta("Engenheiro José Sócrates", new DateTime(1957, 9, 6), new Morada("Nº 33 da rua abade faria", "Lisboa", "1900-003"), 87, true));
+            Clube.Add(new Socio("O Bob The Builder", new DateTime(1950, 3, 7), new Morada("Comboios", "Lisboa", "1923-02"), true));*/
             _add.IsSet += IsDataSet;
 
             if (File.Exists(_filePath))
@@ -71,9 +71,9 @@ namespace M10_T01_N02_N25
 
             Console.WriteLine(e.Index);
             if (e.Index == 0)
-                Clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso));
+                Clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso, true));
             else if (e.Index == 1)
-                Clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa));
+                Clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, true));
 
             form.ClearField();
             form.Hide();
@@ -86,7 +86,8 @@ namespace M10_T01_N02_N25
             pessoasString.Clear();
             foreach (var item in Clube.Pessoas)
             {
-                pessoasString.Add(item.ToString());
+                if (item.Active)
+                    pessoasString.Add(item.ToString());
             }
             lstPessoas.DataSource = pessoasString;
 
@@ -176,6 +177,7 @@ namespace M10_T01_N02_N25
             }
             UpdateLB();
             Console.WriteLine("End Load...");
+            MessageBox.Show("Loaded");
         }
 
         private void AutoSaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -204,14 +206,13 @@ namespace M10_T01_N02_N25
             {
                 if (Clube.Pessoas[lstPessoas.SelectedIndex] is Atleta)
                 {
-                    var bystander = new Atleta(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa, 0);
+                    var bystander = new Atleta(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa, 0, true);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
-                    UpdateDados(lstPessoas.SelectedIndex);
-                    Console.WriteLine("Hi 1");
+                    UpdateDados(lstPessoas.SelectedIndex); Console.WriteLine("Hi 1");
                 }
                 else if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
                 {
-                    var bystander = new Socio(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa);
+                    var bystander = new Socio(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa, true);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
                     UpdateDados(lstPessoas.SelectedIndex);
                     Console.WriteLine("Hi 2");
@@ -284,6 +285,17 @@ namespace M10_T01_N02_N25
             pesquisa.ShowDialog();
         }
 
+        private void btnOClube_Click(object sender, EventArgs e)
+        {
+            clubeToolStripMenuItem.PerformClick();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Clube.Pessoas[lstPessoas.SelectedIndex].Active = false;
+            UpdateLB();
+        }
+
         //----------------------------------------------------------- /BTN
 
         private void lstPessoas_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -301,11 +313,6 @@ namespace M10_T01_N02_N25
         private void lstPessoas_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateDados(lstPessoas.SelectedIndex);
-        }
-
-        private void btnOClube_Click(object sender, EventArgs e)
-        {
-            clubeToolStripMenuItem.PerformClick();
         }
     }
 }

@@ -116,6 +116,7 @@
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "E&liminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // grpFMmorada
             // 
@@ -220,14 +221,14 @@
             this.AutoSaveToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.opçõesToolStripMenuItem.Text = "Opções";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.saveToolStripMenuItem.Text = "Guardar";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -235,7 +236,7 @@
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.loadToolStripMenuItem.Text = "Carregar";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
@@ -243,7 +244,7 @@
             // 
             this.AutoSaveToolStripMenuItem.Name = "AutoSaveToolStripMenuItem";
             this.AutoSaveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F2)));
-            this.AutoSaveToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.AutoSaveToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.AutoSaveToolStripMenuItem.Text = "Auto Save";
             this.AutoSaveToolStripMenuItem.Click += new System.EventHandler(this.AutoSaveToolStripMenuItem_Click);
             // 
@@ -251,7 +252,7 @@
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -261,14 +262,14 @@
             this.clubeToolStripMenuItem,
             this.programaToolStripMenuItem});
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // clubeToolStripMenuItem
             // 
             this.clubeToolStripMenuItem.Name = "clubeToolStripMenuItem";
             this.clubeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.clubeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.clubeToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.clubeToolStripMenuItem.Text = "Clube";
             this.clubeToolStripMenuItem.Click += new System.EventHandler(this.clubeToolStripMenuItem_Click);
             // 
@@ -276,7 +277,7 @@
             // 
             this.programaToolStripMenuItem.Name = "programaToolStripMenuItem";
             this.programaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.programaToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.programaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.programaToolStripMenuItem.Text = "Programa";
             this.programaToolStripMenuItem.Click += new System.EventHandler(this.programaToolStripMenuItem_Click);
             // 
