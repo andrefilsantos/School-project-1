@@ -86,8 +86,9 @@ namespace M10_T01_N02_N25
             pessoasString.Clear();
             foreach (var item in Clube.Pessoas)
             {
-                if (item.Active)
-                    pessoasString.Add(item.ToString());
+                //if (!item.Active)
+                pessoasString.Add(item.ToString());
+                //MessageBox.Show(item.Active.ToString());
             }
             lstPessoas.DataSource = pessoasString;
 
@@ -135,8 +136,11 @@ namespace M10_T01_N02_N25
         public void UpdateProfilePic(int index)
         {
             //MessageBox.Show("ProfilePhotos/" + Convert.ToString(index) + ".jpg");
-            if (File.Exists("ProfilePhotos/" + index.ToString() + ".jpg"))
-                picMFfotoPerfil.Image = new Bitmap("ProfilePhotos/" + index.ToString() + ".jpg");
+            if (File.Exists("ProfilePhotos/" + index + ".jpg"))
+            {
+                picMFfotoPerfil.Image = new Bitmap("ProfilePhotos/" + index + ".jpg");
+                //File.FromFile("ProfilePhotos/" + Selected + ".jpg").Dispose
+            }
             else
                 picMFfotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
         }
@@ -177,7 +181,6 @@ namespace M10_T01_N02_N25
             }
             UpdateLB();
             Console.WriteLine("End Load...");
-            MessageBox.Show("Loaded");
         }
 
         private void AutoSaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -190,11 +193,11 @@ namespace M10_T01_N02_N25
         //----------------------------------------------------------- /TOOLSTIP MENU
 
         //----------------------------------------------------------- BTN
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             //Util.GC_CLEANUP();
             var edit = new frmEditar("Editar", true);
+            edit.Selected = lstPessoas.SelectedIndex;
             edit.ClearField();
             edit.DadosPessoa = Clube.Pessoas[lstPessoas.SelectedIndex];
             //var image = new Bitmap(picMFfotoPerfil.Image);

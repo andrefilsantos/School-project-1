@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -60,7 +61,7 @@ namespace M10_T01_N02_N25
                 {
                     //TODO: Image code refactoring...
                     /*if (File.Exists("ProfilePhotos/" + dados.Nome + ".jpg"))
-                    {
+                    {   
                         Dispose();
                         GC.Collect();
                         GC.WaitForPendingFinalizers();
@@ -71,7 +72,17 @@ namespace M10_T01_N02_N25
                     MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
 
                     var image = new Bitmap(picFotoPerfil.Image);
-                    image.Save("ProfilePhotos/" + dados.Nome + ".jpg");
+                    if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
+                    {
+                        MessageBox.Show("Existe camelo!!!");
+                        File.Delete("ProfilePhotos/" + Selected + ".jpg");
+                        MessageBox.Show("eliminado!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        image.Save("ProfilePhotos/" + Selected + ".jpg");
+                        MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 return dados;
             }
@@ -98,6 +109,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void frmEditar_Load(object sender, EventArgs e)
         {
+            //MessageBox.Show(Selected.ToString());
         }
 
         //-----------------------------------------------------------

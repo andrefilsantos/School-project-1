@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Threading;
+using System.Windows.Forms;
 
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
