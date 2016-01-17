@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static System.Windows.Forms.MessageBox;
 
 namespace M10_T01_N02_N25
 {
@@ -60,29 +61,17 @@ namespace M10_T01_N02_N25
                 if (_changePhoto)
                 {
                     //TODO: Image code refactoring...
-                    /*if (File.Exists("ProfilePhotos/" + dados.Nome + ".jpg"))
-                    {   
+                    if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
+                    {
                         Dispose();
                         GC.Collect();
                         GC.WaitForPendingFinalizers();
-                        File.Delete("ProfilePhotos/" + dados.Nome + ".jpg");
-                    }
-                    var image = new Bitmap(picFotoPerfil.Image);
-                    image.Save("ProfilePhotos/" + dados.Nome + ".jpg");
-                    MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
-
-                    var image = new Bitmap(picFotoPerfil.Image);
-                    if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
-                    {
-                        MessageBox.Show("Existe camelo!!!");
                         File.Delete("ProfilePhotos/" + Selected + ".jpg");
-                        MessageBox.Show("eliminado!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else
-                    {
-                        image.Save("ProfilePhotos/" + Selected + ".jpg");
-                        MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    var image = new Bitmap(picFotoPerfil.Image);
+                    image.Save("ProfilePhotos/" + Selected + ".jpg");
+                    MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 return dados;
             }

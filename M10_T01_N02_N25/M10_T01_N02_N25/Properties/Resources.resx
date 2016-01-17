@@ -169,4 +169,7 @@
   <data name="_5168fb83e1e34e0381bb67a80527c464_800" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5168fb83e1e34e0381bb67a80527c464-800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DefaultProfilePhoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultProfilePhoto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

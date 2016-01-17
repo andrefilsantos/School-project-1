@@ -185,10 +185,16 @@
     <None Include="Resources\Sport Lisboa e Benfica_Logo_peq.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Sem Título-1.png" />
+    <None Include="Resources\save.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\save.png" />
+    <None Include="bin\Debug\ProfilePhotos\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ProfilePhotos\DefaultProfilePhoto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultProfilePhoto.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

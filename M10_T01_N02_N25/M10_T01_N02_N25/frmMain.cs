@@ -28,6 +28,7 @@ namespace M10_T01_N02_N25
         private frmPesquisa pesquisa;
         private bool _autoSave = false;
         private string _filePath = "Clube.xml";
+        private Bitmap DefaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
 
         public frmMain()
         {
@@ -61,7 +62,10 @@ namespace M10_T01_N02_N25
                 e.Cancel = true;
             }
             /*else
-                RemoveDuplicates();*/
+            {
+                RemoveBackups();
+                MessageBox.Show("Done");
+            }*/
         }
 
         private void IsDataSet(object sender, EditarEventArgs e)
@@ -100,7 +104,7 @@ namespace M10_T01_N02_N25
                 lblLocalidade.Text = null;
                 lblRua.Text = null;
                 lblCodigoPostal.Text = null;
-                //picMFfotoPerfil.Image = new Bitmap(Resources.DefaultProfilePhoto);
+                picMFfotoPerfil.Image = DefaultProfilePic;
             }
             else
             {
@@ -133,16 +137,32 @@ namespace M10_T01_N02_N25
             UpdateProfilePic(index);
         }
 
+        public void RemoveBackups()
+        {
+            for (var i = 0; i < Clube.Pessoas.Count; i++)
+            {
+                picMFfotoPerfil.Image = new Bitmap(Resources.DefaultProfilePhoto);
+                Util.GC_CLEANUP();
+                if (File.Exists("ProfilePhotos/" + i + "_Bck.jpg"))
+                    File.Delete("ProfilePhotos/" + i + "_Bck.jpg");
+            }
+
+            if (File.Exists("ProfilePhotos/" + Clube.Presidente.Nome + "_Bck.jpg"))
+                File.Delete("ProfilePhotos/" + Clube.Presidente.Nome + "_Bck.jpg");
+            if (File.Exists("ProfilePhotos/" + Atleta.Treinador.Nome + "_Bck.jpg"))
+                File.Delete("ProfilePhotos/" + Atleta.Treinador.Nome + "_Bck.jpg");
+        }
+
         public void UpdateProfilePic(int index)
         {
-            //MessageBox.Show("ProfilePhotos/" + Convert.ToString(index) + ".jpg");
-            if (File.Exists("ProfilePhotos/" + index + ".jpg"))
+         if (File.Exists("ProfilePhotos/" + index + ".jpg"))
             {
-                picMFfotoPerfil.Image = new Bitmap("ProfilePhotos/" + index + ".jpg");
-                //File.FromFile("ProfilePhotos/" + Selected + ".jpg").Dispose
+                Bitmap fotoPerfil = new Bitmap("ProfilePhotos/" + index + ".jpg");
+                picMFfotoPerfil.Image = fotoPerfil;
+                //fotoPerfil.Dispose();
             }
             else
-                picMFfotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
+                picMFfotoPerfil.Image = DefaultProfilePic;
         }
 
         //----------------------------------------------------------- TOOLSTIP MENU
