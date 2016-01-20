@@ -11,6 +11,8 @@ namespace M10_T01_N02_N25
     //-----------------------------------------------------------
     public partial class frmSobreClube : Form
     {
+        //TODO: Total shareholders / Athletes
+        //TODO: Pictures President / Coach
         //-----------------------------------------------------------
         public frmSobreClube()
         {

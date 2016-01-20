@@ -16,7 +16,9 @@ namespace M10_T01_N02_N25
 {
     public partial class frmMain : Form
     {
-        //TODO: Redo load code
+        //TODO: Redo LOAD code to only show active members
+        //TODO: Make the 'Efficient' code images
+        //TODO: Insert Benfica athletes
 
         //-----------------------------------------------------------
         public Clube Clube = new Clube();
@@ -61,11 +63,11 @@ namespace M10_T01_N02_N25
             {
                 e.Cancel = true;
             }
-            /*else
+            else
             {
                 RemoveBackups();
                 MessageBox.Show("Done");
-            }*/
+            }
         }
 
         private void IsDataSet(object sender, EditarEventArgs e)
@@ -130,7 +132,6 @@ namespace M10_T01_N02_N25
             }
             else if (Clube.Pessoas[index] is Socio)
             {
-
                 var socio = (Socio)Clube.Pessoas[index];
                 lblPesoSocio.Text = "Número de Sócio: " + socio.NumSocio;
             }
@@ -147,25 +148,32 @@ namespace M10_T01_N02_N25
                     File.Delete("ProfilePhotos/" + i + "_Bck.jpg");
             }
 
-            if (File.Exists("ProfilePhotos/" + Clube.Presidente.Nome + "_Bck.jpg"))
-                File.Delete("ProfilePhotos/" + Clube.Presidente.Nome + "_Bck.jpg");
-            if (File.Exists("ProfilePhotos/" + Atleta.Treinador.Nome + "_Bck.jpg"))
-                File.Delete("ProfilePhotos/" + Atleta.Treinador.Nome + "_Bck.jpg");
+            if (File.Exists("ProfilePhotos/" + "Presidente" + "_Bck.jpg"))
+                File.Delete("ProfilePhotos/" + "Presidente" + "_Bck.jpg");
+            if (File.Exists("ProfilePhotos/" + "Treinador" + "_Bck.jpg"))
+                File.Delete("ProfilePhotos/" + "Treinador" + "_Bck.jpg");
         }
 
         public void UpdateProfilePic(int index)
         {
-         if (File.Exists("ProfilePhotos/" + index + ".jpg"))
+            if (!File.Exists("ProfilePhotos/" + index + "_Bck.jpg") && File.Exists("ProfilePhotos/" + index + ".jpg"))
             {
-                Bitmap fotoPerfil = new Bitmap("ProfilePhotos/" + index + ".jpg");
-                picMFfotoPerfil.Image = fotoPerfil;
-                //fotoPerfil.Dispose();
+                File.Copy("ProfilePhotos/" + index + ".jpg", "ProfilePhotos/" + index + "_Bck.jpg");
+            }
+
+            if (File.Exists("ProfilePhotos/" + index + "_Bck.jpg"))
+            {
+                MessageBox.Show("Imagem existe");
+                picMFfotoPerfil.Image = new Bitmap("ProfilePhotos/" + index + "_Bck.jpg");
             }
             else
-                picMFfotoPerfil.Image = DefaultProfilePic;
+            {
+                MessageBox.Show("Imagem não existe");
+                picMFfotoPerfil.Image = new Bitmap(Resources.DefaultProfilePhoto);
+            }
         }
 
-        //----------------------------------------------------------- TOOLSTIP MENU
+        #region ToolStripMenu
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -210,9 +218,9 @@ namespace M10_T01_N02_N25
                 _autoSave = !_autoSave;
         }
 
-        //----------------------------------------------------------- /TOOLSTIP MENU
+        #endregion
 
-        //----------------------------------------------------------- BTN
+        #region BTN
         private void btnEditar_Click(object sender, EventArgs e)
         {
             //Util.GC_CLEANUP();
@@ -241,17 +249,7 @@ namespace M10_T01_N02_N25
                     Console.WriteLine("Hi 2");
                 }
             }
-            /*try
-            {
-                //Util.GC_CLEANUP();
-                File.Move("ProfilePhotos/" + startName + "_MF.jpg", "ProfilePhotos/" + Clube.Pessoas[lstPessoas.SelectedIndex].Nome + "_MF.jpg");
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Erro...", "", MessageBoxButtons.OK);
-            }*/
-
+            edit.picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
             UpdateLB();
         }
 
@@ -319,7 +317,7 @@ namespace M10_T01_N02_N25
             UpdateLB();
         }
 
-        //----------------------------------------------------------- /BTN
+        #endregion
 
         private void lstPessoas_MouseDoubleClick(object sender, MouseEventArgs e)
         {

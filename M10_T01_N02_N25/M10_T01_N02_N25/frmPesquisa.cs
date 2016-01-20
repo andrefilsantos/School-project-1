@@ -5,6 +5,8 @@ using System.Windows.Forms;
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
 {
+    //TODO: Do advanced search
+
     //-----------------------------------------------------------
     public partial class frmPesquisa : Form //TODO: Get the search working
     {

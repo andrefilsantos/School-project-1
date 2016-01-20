@@ -13,7 +13,7 @@ using static System.Windows.Forms.MessageBox;
 
 namespace M10_T01_N02_N25
 {
-    public partial class frmEditar : Form //TODO: Image loading Complete code refator 
+    public partial class frmEditar : Form
     {
         //-----------------------------------------------------------
         private DateTime _data;
@@ -58,21 +58,16 @@ namespace M10_T01_N02_N25
 
                 dados.DataNasc = !converteuOk ? _data : DateTime.Now;
 
-                if (_changePhoto)
+                if (!_changePhoto) return dados;
+                if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
                 {
-                    //TODO: Image code refactoring...
-                    if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
-                    {
-                        Dispose();
-                        GC.Collect();
-                        GC.WaitForPendingFinalizers();
-                        File.Delete("ProfilePhotos/" + Selected + ".jpg");
-                    }
-                    var image = new Bitmap(picFotoPerfil.Image);
-                    image.Save("ProfilePhotos/" + Selected + ".jpg");
-                    MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                    Dispose();
+                    Util.GC_CLEANUP();
+                    File.Delete("ProfilePhotos/" + Selected + ".jpg");
                 }
+                Bitmap image = new Bitmap(picFotoPerfil.Image);
+                image.Save("ProfilePhotos/" + Selected + ".jpg");
+                MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return dados;
             }
 
@@ -85,10 +80,10 @@ namespace M10_T01_N02_N25
                 txtLocalidade.Text = value.MoradaPessoa.Localidade;
                 mskCodigoPostal.Text = value.MoradaPessoa.CodigoPostal;
 
-                /*if (File.Exists("ProfilePhotos/" + value.Nome + ".jpg"))
-                    picFotoPerfil.Image = new Bitmap("ProfilePhotos/" + value.Nome + ".jpg");
+                if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
+                    picFotoPerfil.Image = new Bitmap("ProfilePhotos/" + Selected + ".jpg");
                 else
-                    picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");*/
+                    picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
             }
         }
 
@@ -127,7 +122,7 @@ namespace M10_T01_N02_N25
             txtRua.Text = null;
             txtLocalidade.Text = null;
             mskCodigoPostal.Text = null;
-            //picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
+            picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
         }
 
         //-----------------------------------------------------------
@@ -165,9 +160,9 @@ namespace M10_T01_N02_N25
                 Title = "Editar > Foto de Perfil",
                 Filter = "Apenas Imagens. |*jpg"
             };
-            var dr = changeImg.ShowDialog();
-            if (string.IsNullOrEmpty(changeImg.FileName)) return;
-            picFotoPerfil.Image = new Bitmap(changeImg.FileName);
+            DialogResult dr = changeImg.ShowDialog();
+            //if (dr != DialogResult.Cancel)
+                picFotoPerfil.Image = Image.FromFile(changeImg.FileName);
             _changePhoto = true;
         }
     }
