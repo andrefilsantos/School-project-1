@@ -33,13 +33,13 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void frmPesquisa_Load(object sender, EventArgs e)
         {
-
+            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text)));
         }
 
         //-----------------------------------------------------------
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-            Update(SearchByName(txtPesquisa.Text));
+            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text)));
         }
 
         //-----------------------------------------------------------
@@ -49,7 +49,13 @@ namespace M10_T01_N02_N25
 
             for (int i = 0; i < _clube.Pessoas.Count; i++)
             {
+                /* //TODO: Get this working with Diacritics
                 if (_clube.Pessoas[i].Nome.ToUpper().Contains(name.ToUpper()))
+                {
+                   
+                }*/
+                string pessTemp = Util.RemoveDiacritics(_clube.Pessoas[i].Nome);
+                if (pessTemp.ToUpper().Contains(_clube.Pessoas[i].Nome))
                 {
                     pessoasIndex.Add(i);
                 }

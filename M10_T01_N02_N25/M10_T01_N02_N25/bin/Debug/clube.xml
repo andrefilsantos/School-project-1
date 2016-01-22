@@ -4,4 +4,5 @@
   <Atleta Nome="Engenheiro José Sócrates" Peso="87" Dia="6" Mes="9" Ano="1957" Rua="Nº 33 da rua abade faria" Localidade="Lisboa" CodigoPostoal="1900-003" Active="False" />
   <Socio Nome="O Bob The Builder" CodSocio="2" Dia="7" Mes="3" Ano="1950" Rua="Comboios" Localidade="Lisboa" CodigoPostoal="1923-02" Active="False" />
   <Atleta Nome="Diogo Pais" Peso="50" Dia="14" Mes="1" Ano="2016" Rua="Rua do Hitler" Localidade="Localidade do Hitle" CodigoPostoal="5478-585" Active="False" />
+  <Atleta Nome="MAnel" Peso="23" Dia="22" Mes="1" Ano="2016" Rua="c" Localidade="s" CodigoPostoal="1111-111" Active="True" />
 </Clube>

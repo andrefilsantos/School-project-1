@@ -1,19 +1,19 @@
-﻿using System;
+﻿
+//-----------------------------------------------------------
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Media;
 using System.Xml;
 using M10_T01_N02_N25.Properties;
 
+//-----------------------------------------------------------
 namespace M10_T01_N02_N25
 {
+    //-----------------------------------------------------------
     public partial class frmMain : Form
     {
         //TODO: Redo LOAD code to only show active members
@@ -22,6 +22,7 @@ namespace M10_T01_N02_N25
 
         //-----------------------------------------------------------
         public Clube Clube = new Clube();
+
         //-----------------------------------------------------------
         private frmEditar _edit = new frmEditar("Editar", true);
         private frmEditar _add = new frmEditar("Adicionar", false);
@@ -32,11 +33,13 @@ namespace M10_T01_N02_N25
         private string _filePath = "Clube.xml";
         private Bitmap DefaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
 
+        //-----------------------------------------------------------
         public frmMain()
         {
             InitializeComponent();
         }
 
+        //-----------------------------------------------------------
         private void formMain_Load(object sender, EventArgs e)
         {
             /*Clube.Add(new Pessoa("Coiso Manel", new DateTime(1572, 12, 19), new Morada("Marte", "Cratera 3", "1900-003"), true));
@@ -54,6 +57,7 @@ namespace M10_T01_N02_N25
             pesquisa = new frmPesquisa(ref Clube);
         }
 
+        //-----------------------------------------------------------
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             SystemSounds.Exclamation.Play();
@@ -66,10 +70,11 @@ namespace M10_T01_N02_N25
             else
             {
                 RemoveBackups();
-                MessageBox.Show("Done");
+                //MessageBox.Show("Done");
             }
         }
 
+        //-----------------------------------------------------------
         private void IsDataSet(object sender, EditarEventArgs e)
         {
             //-----------------------------------------------------------
@@ -86,6 +91,7 @@ namespace M10_T01_N02_N25
             UpdateLB();
         }
 
+        //-----------------------------------------------------------
         private void UpdateLB()
         {
             var pessoasString = new List<string>();
@@ -118,6 +124,7 @@ namespace M10_T01_N02_N25
             }
         }
 
+        //-----------------------------------------------------------
         public void UpdateDados(int index)
         {
             lblNome.Text = "Nome: " + Clube.Pessoas[index].Nome;
@@ -138,6 +145,7 @@ namespace M10_T01_N02_N25
             UpdateProfilePic(index);
         }
 
+        //-----------------------------------------------------------
         public void RemoveBackups()
         {
             for (var i = 0; i < Clube.Pessoas.Count; i++)
@@ -154,6 +162,7 @@ namespace M10_T01_N02_N25
                 File.Delete("ProfilePhotos/" + "Treinador" + "_Bck.jpg");
         }
 
+        //-----------------------------------------------------------
         public void UpdateProfilePic(int index)
         {
             if (!File.Exists("ProfilePhotos/" + index + "_Bck.jpg") && File.Exists("ProfilePhotos/" + index + ".jpg"))
@@ -163,40 +172,47 @@ namespace M10_T01_N02_N25
 
             if (File.Exists("ProfilePhotos/" + index + "_Bck.jpg"))
             {
-                MessageBox.Show("Imagem existe");
+                //MessageBox.Show("Imagem existe");
                 picMFfotoPerfil.Image = new Bitmap("ProfilePhotos/" + index + "_Bck.jpg");
             }
             else
             {
-                MessageBox.Show("Imagem não existe");
+                //MessageBox.Show("Imagem não existe");
                 picMFfotoPerfil.Image = new Bitmap(Resources.DefaultProfilePhoto);
             }
         }
 
+        //-----------------------------------------------------------
         #region ToolStripMenu
 
+        //-----------------------------------------------------------
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnGuardar.PerformClick();
         }
 
+        //-----------------------------------------------------------
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnSair.PerformClick();
         }
 
+        //-----------------------------------------------------------
         private void clubeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _sobreClube.ShowDialog();
         }
 
+        //-----------------------------------------------------------
         private void programaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _sobre.ShowDialog();
         }
 
+        //-----------------------------------------------------------
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Clube.Pessoas.Clear();
             using (var reader = XmlReader.Create(_filePath))
             {
                 while (reader.Read())
@@ -211,6 +227,7 @@ namespace M10_T01_N02_N25
             Console.WriteLine("End Load...");
         }
 
+        //-----------------------------------------------------------
         private void AutoSaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var res = MessageBox.Show("O Auto Save encontra-se " + Util.BoolToStringAdj(_autoSave) + ", pretende " + Util.BoolToStringVrb(!_autoSave) + "?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -220,6 +237,7 @@ namespace M10_T01_N02_N25
 
         #endregion
 
+        //-----------------------------------------------------------
         #region BTN
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -253,6 +271,7 @@ namespace M10_T01_N02_N25
             UpdateLB();
         }
 
+        //-----------------------------------------------------------
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             _add.ClearField();
@@ -260,33 +279,39 @@ namespace M10_T01_N02_N25
             _add.Hide();
         }
 
+        //-----------------------------------------------------------
         private void btnSair_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        //-----------------------------------------------------------
         private void btnPrimeiro_Click(object sender, EventArgs e)
         {
             lstPessoas.SelectedIndex = 0;
         }
 
+        //-----------------------------------------------------------
         private void btnAnterior_Click(object sender, EventArgs e)
         {
             if (lstPessoas.SelectedIndex > 0)
                 lstPessoas.SelectedIndex--;
         }
 
+        //-----------------------------------------------------------
         private void btnProximo_Click(object sender, EventArgs e)
         {
             if (lstPessoas.SelectedIndex < Clube.Pessoas.Count() - 1)
                 lstPessoas.SelectedIndex++;
         }
 
+        //-----------------------------------------------------------
         private void btnUltimo_Click(object sender, EventArgs e)
         {
             lstPessoas.SelectedIndex = Clube.Pessoas.Count() - 1;
         }
 
+        //-----------------------------------------------------------
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             var settings = new XmlWriterSettings();
@@ -301,24 +326,29 @@ namespace M10_T01_N02_N25
             Console.WriteLine("End Save...");
         }
 
+        //-----------------------------------------------------------
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
             pesquisa.ShowDialog();
         }
 
+        //-----------------------------------------------------------
         private void btnOClube_Click(object sender, EventArgs e)
         {
             clubeToolStripMenuItem.PerformClick();
         }
 
+        //-----------------------------------------------------------
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Clube.Pessoas[lstPessoas.SelectedIndex].Active = false;
+            //Clube.Pessoas[lstPessoas.SelectedIndex].Active = false;
+            Clube.Pessoas.Remove(Clube.Pessoas[lstPessoas.SelectedIndex]);
             UpdateLB();
         }
 
         #endregion
 
+        //-----------------------------------------------------------
         private void lstPessoas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             try
@@ -331,6 +361,7 @@ namespace M10_T01_N02_N25
             }
         }
 
+        //-----------------------------------------------------------
         private void lstPessoas_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateDados(lstPessoas.SelectedIndex);
