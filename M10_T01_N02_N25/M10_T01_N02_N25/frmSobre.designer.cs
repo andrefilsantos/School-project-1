@@ -59,22 +59,22 @@
             // lblSobreVersao
             // 
             this.lblSobreVersao.AutoSize = true;
-            this.lblSobreVersao.Font = new System.Drawing.Font("Fira Sans Medium", 10F, System.Drawing.FontStyle.Bold);
+            this.lblSobreVersao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.lblSobreVersao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(180)))), ((int)(((byte)(29)))));
             this.lblSobreVersao.Location = new System.Drawing.Point(26, 96);
             this.lblSobreVersao.Name = "lblSobreVersao";
-            this.lblSobreVersao.Size = new System.Drawing.Size(71, 20);
+            this.lblSobreVersao.Size = new System.Drawing.Size(86, 17);
             this.lblSobreVersao.TabIndex = 2;
             this.lblSobreVersao.Text = "2.11.25.08";
             // 
             // lblSobreNomeProg
             // 
             this.lblSobreNomeProg.AutoSize = true;
-            this.lblSobreNomeProg.Font = new System.Drawing.Font("Fira Sans SemiBold", 39F, System.Drawing.FontStyle.Bold);
+            this.lblSobreNomeProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 39F, System.Drawing.FontStyle.Bold);
             this.lblSobreNomeProg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(204)))));
             this.lblSobreNomeProg.Location = new System.Drawing.Point(13, 19);
             this.lblSobreNomeProg.Name = "lblSobreNomeProg";
-            this.lblSobreNomeProg.Size = new System.Drawing.Size(277, 73);
+            this.lblSobreNomeProg.Size = new System.Drawing.Size(277, 59);
             this.lblSobreNomeProg.TabIndex = 1;
             this.lblSobreNomeProg.Text = "Ahiru Club";
             // 
@@ -100,16 +100,16 @@
             // lblSobreCopyrights
             // 
             this.lblSobreCopyrights.AutoSize = true;
-            this.lblSobreCopyrights.Font = new System.Drawing.Font("Fira Sans Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobreCopyrights.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobreCopyrights.Location = new System.Drawing.Point(13, 156);
             this.lblSobreCopyrights.Name = "lblSobreCopyrights";
-            this.lblSobreCopyrights.Size = new System.Drawing.Size(362, 17);
+            this.lblSobreCopyrights.Size = new System.Drawing.Size(408, 15);
             this.lblSobreCopyrights.TabIndex = 3;
             this.lblSobreCopyrights.Text = "Copyright © 2015-2016 Ahiru Productions. All Rights Reserved.";
             // 
             // lblSobre
             // 
-            this.lblSobre.Font = new System.Drawing.Font("Fira Sans", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobre.Location = new System.Drawing.Point(12, 179);
             this.lblSobre.Name = "lblSobre";
             this.lblSobre.Size = new System.Drawing.Size(710, 57);
@@ -119,10 +119,10 @@
             // lblSobreAutores
             // 
             this.lblSobreAutores.AutoSize = true;
-            this.lblSobreAutores.Font = new System.Drawing.Font("Fira Sans SemiBold", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lblSobreAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblSobreAutores.Location = new System.Drawing.Point(12, 321);
             this.lblSobreAutores.Name = "lblSobreAutores";
-            this.lblSobreAutores.Size = new System.Drawing.Size(185, 20);
+            this.lblSobreAutores.Size = new System.Drawing.Size(215, 17);
             this.lblSobreAutores.TabIndex = 5;
             this.lblSobreAutores.Text = "André Santos e Tomás Pinto";
             // 
@@ -167,6 +167,7 @@
             this.Text = "Sobre";
             this.Activated += new System.EventHandler(this.frmSobre_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSobre_FormClosing);
+            this.Load += new System.EventHandler(this.frmSobre_Load);
             this.pnlSobreHeader.ResumeLayout(false);
             this.pnlSobreHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

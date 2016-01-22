@@ -8,7 +8,7 @@ namespace M10_T01_N02_N25
     //TODO: Do advanced search
 
     //-----------------------------------------------------------
-    public partial class frmPesquisa : Form //TODO: Get the search working
+    public partial class frmPesquisa : Form 
     {
         private Clube _clube;
         //-----------------------------------------------------------
@@ -33,13 +33,13 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void frmPesquisa_Load(object sender, EventArgs e)
         {
-            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text)));
+            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text).ToUpper()));
         }
 
         //-----------------------------------------------------------
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text)));
+            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text).ToUpper()));
         }
 
         //-----------------------------------------------------------
@@ -48,18 +48,8 @@ namespace M10_T01_N02_N25
             List<int> pessoasIndex = new List<int>();
 
             for (int i = 0; i < _clube.Pessoas.Count; i++)
-            {
-                /* //TODO: Get this working with Diacritics
-                if (_clube.Pessoas[i].Nome.ToUpper().Contains(name.ToUpper()))
-                {
-                   
-                }*/
-                string pessTemp = Util.RemoveDiacritics(_clube.Pessoas[i].Nome);
-                if (pessTemp.ToUpper().Contains(_clube.Pessoas[i].Nome))
-                {
+                if (Util.RemoveDiacritics(_clube.Pessoas[i].ToString()).ToUpper().Contains(name))
                     pessoasIndex.Add(i);
-                }
-            }
 
             return pessoasIndex;
         }
@@ -68,14 +58,14 @@ namespace M10_T01_N02_N25
         private void Update(List<int> indexes)
         {
             List<string> resultados = new List<string>();
+
             foreach (var index in indexes)
-            {
-                Console.WriteLine(_clube.Pessoas[index]);
                 resultados.Add(_clube.Pessoas[index].ToString());
-            }
+
             lstResultados.DataSource = resultados;
         }
 
+        //-----------------------------------------------------------
         private void frmPesquisa_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)

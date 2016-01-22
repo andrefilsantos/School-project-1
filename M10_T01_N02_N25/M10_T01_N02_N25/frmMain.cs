@@ -28,10 +28,10 @@ namespace M10_T01_N02_N25
         private frmEditar _add = new frmEditar("Adicionar", false);
         private frmSobre _sobre = new frmSobre();
         private frmSobreClube _sobreClube = new frmSobreClube();
-        private frmPesquisa pesquisa;
+        private frmPesquisa _pesquisa;
         private bool _autoSave = false;
         private string _filePath = "Clube.xml";
-        private Bitmap DefaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
+        private Bitmap _defaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
 
         //-----------------------------------------------------------
         public frmMain()
@@ -42,9 +42,6 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void formMain_Load(object sender, EventArgs e)
         {
-            /*Clube.Add(new Pessoa("Coiso Manel", new DateTime(1572, 12, 19), new Morada("Marte", "Cratera 3", "1900-003"), true));
-            Clube.Add(new Atleta("Engenheiro José Sócrates", new DateTime(1957, 9, 6), new Morada("Nº 33 da rua abade faria", "Lisboa", "1900-003"), 87, true));
-            Clube.Add(new Socio("O Bob The Builder", new DateTime(1950, 3, 7), new Morada("Comboios", "Lisboa", "1923-02"), true));*/
             _add.IsSet += IsDataSet;
 
             if (File.Exists(_filePath))
@@ -53,8 +50,8 @@ namespace M10_T01_N02_N25
                 loadToolStripMenuItem.PerformClick();
             }
 
-            UpdateLB();
-            pesquisa = new frmPesquisa(ref Clube);
+            UpdateLb();
+            _pesquisa = new frmPesquisa(ref Clube);
         }
 
         //-----------------------------------------------------------
@@ -70,7 +67,6 @@ namespace M10_T01_N02_N25
             else
             {
                 RemoveBackups();
-                //MessageBox.Show("Done");
             }
         }
 
@@ -78,9 +74,8 @@ namespace M10_T01_N02_N25
         private void IsDataSet(object sender, EditarEventArgs e)
         {
             //-----------------------------------------------------------
-            frmEditar form = (frmEditar)sender;
+            var form = (frmEditar)sender;
 
-            Console.WriteLine(e.Index);
             if (e.Index == 0)
                 Clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso, true));
             else if (e.Index == 1)
@@ -88,14 +83,15 @@ namespace M10_T01_N02_N25
 
             form.ClearField();
             form.Hide();
-            UpdateLB();
+            UpdateLb();
         }
 
         //-----------------------------------------------------------
-        private void UpdateLB()
+        private void UpdateLb()
         {
             var pessoasString = new List<string>();
             pessoasString.Clear();
+            if (Clube == null) return;
             foreach (var item in Clube.Pessoas)
             {
                 //if (!item.Active)
@@ -112,7 +108,7 @@ namespace M10_T01_N02_N25
                 lblLocalidade.Text = null;
                 lblRua.Text = null;
                 lblCodigoPostal.Text = null;
-                picMFfotoPerfil.Image = DefaultProfilePic;
+                picMFfotoPerfil.Image = _defaultProfilePic;
             }
             else
             {
@@ -134,12 +130,12 @@ namespace M10_T01_N02_N25
             lblCodigoPostal.Text = Clube.Pessoas[index].MoradaPessoa.CodigoPostal;
             if (Clube.Pessoas[index] is Atleta)
             {
-                var atleta = (Atleta)Clube.Pessoas[index];
+                var atleta = Clube.Pessoas[index] as Atleta;
                 lblPesoSocio.Text = "Peso: " + atleta.Peso + " Kg";
             }
             else if (Clube.Pessoas[index] is Socio)
             {
-                var socio = (Socio)Clube.Pessoas[index];
+                var socio = Clube.Pessoas[index] as Socio;
                 lblPesoSocio.Text = "Número de Sócio: " + socio.NumSocio;
             }
             UpdateProfilePic(index);
@@ -170,16 +166,7 @@ namespace M10_T01_N02_N25
                 File.Copy("ProfilePhotos/" + index + ".jpg", "ProfilePhotos/" + index + "_Bck.jpg");
             }
 
-            if (File.Exists("ProfilePhotos/" + index + "_Bck.jpg"))
-            {
-                //MessageBox.Show("Imagem existe");
-                picMFfotoPerfil.Image = new Bitmap("ProfilePhotos/" + index + "_Bck.jpg");
-            }
-            else
-            {
-                //MessageBox.Show("Imagem não existe");
-                picMFfotoPerfil.Image = new Bitmap(Resources.DefaultProfilePhoto);
-            }
+            picMFfotoPerfil.Image = File.Exists("ProfilePhotos/" + index + "_Bck.jpg") ? new Bitmap("ProfilePhotos/" + index + "_Bck.jpg") : new Bitmap(Resources.DefaultProfilePhoto);
         }
 
         //-----------------------------------------------------------
@@ -223,7 +210,7 @@ namespace M10_T01_N02_N25
                     }
                 }
             }
-            UpdateLB();
+            UpdateLb();
             Console.WriteLine("End Load...");
         }
 
@@ -268,14 +255,15 @@ namespace M10_T01_N02_N25
                 }
             }
             edit.picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
-            UpdateLB();
+            UpdateLb();
         }
 
         //-----------------------------------------------------------
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             _add.ClearField();
-            DialogResult result = _add.ShowDialog();
+            Util.GC_CLEANUP();
+            var result = _add.ShowDialog();
             _add.Hide();
         }
 
@@ -314,8 +302,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            var settings = new XmlWriterSettings();
-            settings.Indent = true;
+            var settings = new XmlWriterSettings {Indent = true};
 
             using (var writer = XmlWriter.Create(_filePath, settings))
             {
@@ -329,7 +316,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-            pesquisa.ShowDialog();
+            _pesquisa.ShowDialog();
         }
 
         //-----------------------------------------------------------
@@ -343,7 +330,7 @@ namespace M10_T01_N02_N25
         {
             //Clube.Pessoas[lstPessoas.SelectedIndex].Active = false;
             Clube.Pessoas.Remove(Clube.Pessoas[lstPessoas.SelectedIndex]);
-            UpdateLB();
+            UpdateLb();
         }
 
         #endregion

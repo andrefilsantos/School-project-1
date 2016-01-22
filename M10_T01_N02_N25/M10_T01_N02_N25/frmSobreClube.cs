@@ -1,9 +1,6 @@
 ﻿//-----------------------------------------------------------
 using System;
-using System.Drawing;
 using System.Windows.Forms;
-using System.IO;
-using M10_T01_N02_N25.Properties;
 
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
@@ -13,11 +10,13 @@ namespace M10_T01_N02_N25
     {
         //TODO: Total shareholders / Athletes
         //TODO: Pictures President / Coach
-        //-----------------------------------------------------------
+        
+            //-----------------------------------------------------------
         public frmSobreClube()
         {
             InitializeComponent();
         }
+
         //-----------------------------------------------------------
         private void frmSobreOClube_Load(object sender, EventArgs e)
         {
@@ -38,6 +37,7 @@ namespace M10_T01_N02_N25
             var edit = new frmEditar("Editar", true) { DadosPessoa = Clube.Presidente};
             var startName = Clube.Presidente.Nome;
             var result = edit.ShowDialog();
+
             if (result == DialogResult.OK)
             {
                 Clube.Presidente.Nome = edit.DadosPessoa.Nome;

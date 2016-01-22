@@ -17,7 +17,7 @@ namespace M10_T01_N02_N25
     {
         //-----------------------------------------------------------
         private DateTime _data;
-        private bool _changePhoto = false;
+        private bool _changePhoto;
         public int Selected;
 
         //-----------------------------------------------------------
@@ -65,7 +65,7 @@ namespace M10_T01_N02_N25
                     Util.GC_CLEANUP();
                     File.Delete("ProfilePhotos/" + Selected + ".jpg");
                 }
-                Bitmap image = new Bitmap(picFotoPerfil.Image);
+                var image = new Bitmap(picFotoPerfil.Image);
                 image.Save("ProfilePhotos/" + Selected + ".jpg");
                 MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return dados;
@@ -80,10 +80,7 @@ namespace M10_T01_N02_N25
                 txtLocalidade.Text = value.MoradaPessoa.Localidade;
                 mskCodigoPostal.Text = value.MoradaPessoa.CodigoPostal;
 
-                if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
-                    picFotoPerfil.Image = new Bitmap("ProfilePhotos/" + Selected + ".jpg");
-                else
-                    picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
+                picFotoPerfil.Image = File.Exists("ProfilePhotos/" + Selected + ".jpg") ? new Bitmap("ProfilePhotos/" + Selected + ".jpg") : new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
             }
         }
 
@@ -93,7 +90,6 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void frmEditar_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(Selected.ToString());
         }
 
         //-----------------------------------------------------------
@@ -122,7 +118,7 @@ namespace M10_T01_N02_N25
             txtRua.Text = null;
             txtLocalidade.Text = null;
             mskCodigoPostal.Text = null;
-            picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
+            picFotoPerfil.Image = null;
         }
 
         //-----------------------------------------------------------
@@ -160,8 +156,8 @@ namespace M10_T01_N02_N25
                 Title = "Editar > Foto de Perfil",
                 Filter = "Apenas Imagens. |*jpg"
             };
-            DialogResult dr = changeImg.ShowDialog();
-            //if (dr != DialogResult.Cancel)
+            var dr = changeImg.ShowDialog();
+            if (dr != DialogResult.Cancel)
                 picFotoPerfil.Image = Image.FromFile(changeImg.FileName);
             _changePhoto = true;
         }

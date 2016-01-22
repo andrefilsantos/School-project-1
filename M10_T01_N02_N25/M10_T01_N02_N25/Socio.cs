@@ -56,7 +56,7 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        public override void Read(XmlReader reader) //BUG: Loading is not working...
+        public override void Read(XmlReader reader) 
         {
             Nome = reader.GetAttribute("Nome");
             var year = Convert.ToInt32(reader.GetAttribute("Ano"));
