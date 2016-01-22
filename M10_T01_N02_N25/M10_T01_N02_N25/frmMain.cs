@@ -242,16 +242,17 @@ namespace M10_T01_N02_N25
             {
                 if (Clube.Pessoas[lstPessoas.SelectedIndex] is Atleta)
                 {
-                    var bystander = new Atleta(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa, 0, true);
+                    var pess = edit.DadosPessoa;
+                    var bystander = new Atleta(pess.Nome,pess.DataNasc, pess.MoradaPessoa, 0, true);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
-                    UpdateDados(lstPessoas.SelectedIndex); Console.WriteLine("Hi 1");
+                    UpdateDados(lstPessoas.SelectedIndex); 
                 }
                 else if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
                 {
-                    var bystander = new Socio(edit.DadosPessoa.Nome, edit.DadosPessoa.DataNasc, edit.DadosPessoa.MoradaPessoa, true);
+                    var pess = edit.DadosPessoa;
+                    var bystander = new Socio(pess.Nome, pess.DataNasc, pess.MoradaPessoa, true);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
                     UpdateDados(lstPessoas.SelectedIndex);
-                    Console.WriteLine("Hi 2");
                 }
             }
             edit.picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
@@ -261,7 +262,6 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            _add.ClearField();
             Util.GC_CLEANUP();
             var result = _add.ShowDialog();
             _add.Hide();

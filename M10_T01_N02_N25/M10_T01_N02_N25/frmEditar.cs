@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.Remoting.Channels;
 using static System.Windows.Forms.MessageBox;
 
 namespace M10_T01_N02_N25
@@ -58,10 +59,12 @@ namespace M10_T01_N02_N25
 
                 dados.DataNasc = !converteuOk ? _data : DateTime.Now;
 
+                Console.WriteLine(dados.DataNasc);
+
                 if (!_changePhoto) return dados;
                 if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
                 {
-                    Dispose();
+                    //Dispose();
                     Util.GC_CLEANUP();
                     File.Delete("ProfilePhotos/" + Selected + ".jpg");
                 }
