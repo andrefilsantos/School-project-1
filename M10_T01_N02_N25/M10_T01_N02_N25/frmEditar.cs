@@ -116,6 +116,7 @@ namespace M10_T01_N02_N25
             txtRua.Text = null;
             txtLocalidade.Text = null;
             mskCodigoPostal.Text = null;
+            txtPeso.Text = null;
             picFotoPerfil.Image = null;
         }
 

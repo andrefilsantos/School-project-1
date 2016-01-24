@@ -16,7 +16,6 @@ namespace M10_T01_N02_N25
     public partial class frmMain : Form
     {
         //TODO: Redo LOAD code to only show active members
-        //TODO: Make the 'Efficient' code images
         //TODO: Insert Benfica athletes
 
         //-----------------------------------------------------------
@@ -30,8 +29,8 @@ namespace M10_T01_N02_N25
         private bool _autoSave = false;
         private const string FilePath = "Clube.xml";
         private readonly Bitmap _defaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
-        private int _nAtletas = 0;
-        private int _nSocios = 0;
+        private int _nAtletas;
+        private int _nSocios;
 
         //-----------------------------------------------------------
         public frmMain()
@@ -61,13 +60,9 @@ namespace M10_T01_N02_N25
             var result = MessageBox.Show("Tem a certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.No)
-            {
                 e.Cancel = true;
-            }
             else
-            {
                 RemoveBackups();
-            }
         }
 
         //-----------------------------------------------------------
@@ -108,11 +103,16 @@ namespace M10_T01_N02_N25
                 lblLocalidade.Text = null;
                 lblRua.Text = null;
                 lblCodigoPostal.Text = null;
+                lblPesoSocio.Text = null;
                 picMFfotoPerfil.Image = _defaultProfilePic;
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
             }
             else
             {
                 lblVazio.Visible = false;
+                btnEditar.Enabled = true;
+                btnEliminar.Enabled = true;
             }
             if (_autoSave && Clube.Pessoas.Count > 0)
             {
@@ -152,11 +152,16 @@ namespace M10_T01_N02_N25
                     File.Delete("ProfilePhotos/" + i + "_Bck.jpg");
             }
 
-            Util.GC_CLEANUP();
             if (File.Exists("ProfilePhotos/" + "Presidente" + "_Bck.jpg"))
+            {
+                Util.GC_CLEANUP();
                 File.Delete("ProfilePhotos/" + "Presidente" + "_Bck.jpg");
+            }
             if (File.Exists("ProfilePhotos/" + "Treinador" + "_Bck.jpg"))
+            { 
+                Util.GC_CLEANUP();
                 File.Delete("ProfilePhotos/" + "Treinador" + "_Bck.jpg");
+            }
         }
 
         //-----------------------------------------------------------

@@ -31,17 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesquisa));
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
-            this.pnlbckResultados = new System.Windows.Forms.Panel();
             this.lstResultados = new System.Windows.Forms.ListBox();
-            this.pnlbckResultados.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbpgPesquisaSimples = new System.Windows.Forms.TabPage();
+            this.tbpgPesquisaAvancada = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
+            this.tbpgPesquisaSimples.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtPesquisa
             // 
             this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.3F);
-            this.txtPesquisa.Location = new System.Drawing.Point(13, 13);
+            this.txtPesquisa.Location = new System.Drawing.Point(6, 6);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(774, 26);
+            this.txtPesquisa.Size = new System.Drawing.Size(756, 26);
             this.txtPesquisa.TabIndex = 0;
             this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
@@ -58,31 +61,53 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // pnlbckResultados
-            // 
-            this.pnlbckResultados.BackColor = System.Drawing.Color.White;
-            this.pnlbckResultados.Controls.Add(this.lstResultados);
-            this.pnlbckResultados.Location = new System.Drawing.Point(13, 50);
-            this.pnlbckResultados.Name = "pnlbckResultados";
-            this.pnlbckResultados.Size = new System.Drawing.Size(773, 258);
-            this.pnlbckResultados.TabIndex = 16;
-            // 
             // lstResultados
             // 
             this.lstResultados.FormattingEnabled = true;
-            this.lstResultados.Location = new System.Drawing.Point(4, 4);
+            this.lstResultados.Location = new System.Drawing.Point(6, 38);
             this.lstResultados.Name = "lstResultados";
-            this.lstResultados.Size = new System.Drawing.Size(766, 238);
+            this.lstResultados.Size = new System.Drawing.Size(756, 225);
             this.lstResultados.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tbpgPesquisaSimples);
+            this.tabControl1.Controls.Add(this.tbpgPesquisaAvancada);
+            this.tabControl1.Location = new System.Drawing.Point(13, 13);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(776, 295);
+            this.tabControl1.TabIndex = 17;
+            // 
+            // tbpgPesquisaSimples
+            // 
+            this.tbpgPesquisaSimples.Controls.Add(this.lstResultados);
+            this.tbpgPesquisaSimples.Controls.Add(this.txtPesquisa);
+            this.tbpgPesquisaSimples.Location = new System.Drawing.Point(4, 22);
+            this.tbpgPesquisaSimples.Name = "tbpgPesquisaSimples";
+            this.tbpgPesquisaSimples.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpgPesquisaSimples.Size = new System.Drawing.Size(768, 269);
+            this.tbpgPesquisaSimples.TabIndex = 0;
+            this.tbpgPesquisaSimples.Text = "Pesquisa Simples";
+            this.tbpgPesquisaSimples.UseVisualStyleBackColor = true;
+            // 
+            // tbpgPesquisaAvancada
+            // 
+            this.tbpgPesquisaAvancada.Location = new System.Drawing.Point(4, 22);
+            this.tbpgPesquisaAvancada.Name = "tbpgPesquisaAvancada";
+            this.tbpgPesquisaAvancada.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpgPesquisaAvancada.Size = new System.Drawing.Size(768, 269);
+            this.tbpgPesquisaAvancada.TabIndex = 1;
+            this.tbpgPesquisaAvancada.Text = "Pesquisa Avançada";
+            this.tbpgPesquisaAvancada.UseVisualStyleBackColor = true;
             // 
             // frmPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 361);
-            this.Controls.Add(this.pnlbckResultados);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.txtPesquisa);
+            this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -92,9 +117,10 @@
             this.Text = "Pesquisa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPesquisa_FormClosing);
             this.Load += new System.EventHandler(this.frmPesquisa_Load);
-            this.pnlbckResultados.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tbpgPesquisaSimples.ResumeLayout(false);
+            this.tbpgPesquisaSimples.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -102,7 +128,9 @@
 
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Panel pnlbckResultados;
         private System.Windows.Forms.ListBox lstResultados;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tbpgPesquisaSimples;
+        private System.Windows.Forms.TabPage tbpgPesquisaAvancada;
     }
 }

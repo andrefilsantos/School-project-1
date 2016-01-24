@@ -25,12 +25,6 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            pnlbckResultados.Visible = true;
-        }
-
-        //-----------------------------------------------------------
         private void frmPesquisa_Load(object sender, EventArgs e)
         {
             Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text).ToUpper()));

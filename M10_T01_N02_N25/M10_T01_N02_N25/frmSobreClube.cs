@@ -11,9 +11,6 @@ namespace M10_T01_N02_N25
     //-----------------------------------------------------------
     public partial class frmSobreClube : Form
     {
-        //TODO: Pictures President / Coach
-
-
         public int nSocios;
         public int nAtletas;
 
@@ -41,46 +38,13 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        private void btnEditarPresidente_Click(object sender, EventArgs e)
-        {
-            var login = new frmLogin();
-            login.ShowDialog();
-            if (login.DialogResult == DialogResult.OK)
-            {
-                if (login.username == "Administrator" && login.password == "oaefeott")
-                {
-                    var edit = new frmEditar("Editar", true, "presidente") { DadosPessoa = Clube.Presidente };
-                    var startName = Clube.Presidente.Nome;
-                    var result = edit.ShowDialog();
-
-                    if (result == DialogResult.OK)
-                    {
-                        Clube.Presidente.Nome = edit.DadosPessoa.Nome;
-                        Clube.Presidente.DataNasc = edit.DadosPessoa.DataNasc;
-                        Clube.Presidente.MoradaPessoa = edit.DadosPessoa.MoradaPessoa;
-                        UpdateDados();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Utilizador ou Password Incorretos.\nPor favor, contacte o administrador do sistema para obter os dados.", "Login", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        //-----------------------------------------------------------
         void Backups()
         {
             if (!File.Exists("ProfilePhotos/Presidente_Bck.jpg") && File.Exists("ProfilePhotos/Presidente.jpg"))
-            {
                 File.Copy("ProfilePhotos/Presidente.jpg", "ProfilePhotos/Presidente_Bck.jpg");
-            }
 
             if (!File.Exists("ProfilePhotos/Treinador_Bck.jpg") && File.Exists("ProfilePhotos/Treinador.jpg"))
-            {
                 File.Copy("ProfilePhotos/Treinador.jpg", "ProfilePhotos/Treinador_Bck.jpg");
-            }
         }
 
         //-----------------------------------------------------------
@@ -130,6 +94,35 @@ namespace M10_T01_N02_N25
                 else
                 {
                     MessageBox.Show("Utilizador ou Password Incorretos \nPor favor, contacte o administrador do sistema para obter os dados.", "Login", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        //-----------------------------------------------------------
+        private void btnEditarPresidente_Click(object sender, EventArgs e)
+        {
+            var login = new frmLogin();
+            login.ShowDialog();
+            if (login.DialogResult == DialogResult.OK)
+            {
+                if (login.username == "Administrator" && login.password == "oaefeott")
+                {
+                    var edit = new frmEditar("Editar", true, "presidente") { DadosPessoa = Clube.Presidente };
+                    var startName = Clube.Presidente.Nome;
+                    var result = edit.ShowDialog();
+
+                    if (result == DialogResult.OK)
+                    {
+                        Clube.Presidente.Nome = edit.DadosPessoa.Nome;
+                        Clube.Presidente.DataNasc = edit.DadosPessoa.DataNasc;
+                        Clube.Presidente.MoradaPessoa = edit.DadosPessoa.MoradaPessoa;
+                        UpdateDados();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Utilizador ou Password Incorretos.\nPor favor, contacte o administrador do sistema para obter os dados.", "Login", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
             }

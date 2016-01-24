@@ -47,9 +47,11 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AutoSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.programaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -220,6 +222,7 @@
             this.saveToolStripMenuItem,
             this.loadToolStripMenuItem,
             this.AutoSaveToolStripMenuItem,
+            this.toolStripSeparator1,
             this.sairToolStripMenuItem});
             this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
             this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
@@ -227,6 +230,7 @@
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.Image = global::M10_T01_N02_N25.Properties.Resources.save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
@@ -235,6 +239,7 @@
             // 
             // loadToolStripMenuItem
             // 
+            this.loadToolStripMenuItem.Image = global::M10_T01_N02_N25.Properties.Resources.Refresh;
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.loadToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
@@ -243,14 +248,21 @@
             // 
             // AutoSaveToolStripMenuItem
             // 
+            this.AutoSaveToolStripMenuItem.Image = global::M10_T01_N02_N25.Properties.Resources.AUto_save;
             this.AutoSaveToolStripMenuItem.Name = "AutoSaveToolStripMenuItem";
             this.AutoSaveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F2)));
             this.AutoSaveToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.AutoSaveToolStripMenuItem.Text = "Auto Save";
             this.AutoSaveToolStripMenuItem.Click += new System.EventHandler(this.AutoSaveToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(166, 6);
+            // 
             // sairToolStripMenuItem
             // 
+            this.sairToolStripMenuItem.Image = global::M10_T01_N02_N25.Properties.Resources.exit;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
@@ -261,6 +273,7 @@
             // 
             this.sobreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clubeToolStripMenuItem,
+            this.toolStripSeparator2,
             this.programaToolStripMenuItem});
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
@@ -268,14 +281,21 @@
             // 
             // clubeToolStripMenuItem
             // 
+            this.clubeToolStripMenuItem.Image = global::M10_T01_N02_N25.Properties.Resources.Sport_Lisboa_e_Benfica_Logo_peq;
             this.clubeToolStripMenuItem.Name = "clubeToolStripMenuItem";
             this.clubeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.clubeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.clubeToolStripMenuItem.Text = "Clube";
             this.clubeToolStripMenuItem.Click += new System.EventHandler(this.clubeToolStripMenuItem_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(164, 6);
+            // 
             // programaToolStripMenuItem
             // 
+            this.programaToolStripMenuItem.Image = global::M10_T01_N02_N25.Properties.Resources._5168fb83e1e34e0381bb67a80527c464_800;
             this.programaToolStripMenuItem.Name = "programaToolStripMenuItem";
             this.programaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.programaToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
@@ -466,6 +486,8 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnPesquisa;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 
