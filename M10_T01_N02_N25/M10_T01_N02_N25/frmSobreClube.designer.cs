@@ -50,9 +50,10 @@
             this.lblIdadeTreinador = new System.Windows.Forms.Label();
             this.picLogoClube = new System.Windows.Forms.PictureBox();
             this.lblNomeClube = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDataFundacao = new System.Windows.Forms.Label();
+            this.lblNsocios = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblNatletas = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tbpgPresidente.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -272,7 +273,7 @@
             // 
             // picLogoClube
             // 
-            this.picLogoClube.Location = new System.Drawing.Point(563, 35);
+            this.picLogoClube.Location = new System.Drawing.Point(561, 35);
             this.picLogoClube.Name = "picLogoClube";
             this.picLogoClube.Size = new System.Drawing.Size(160, 185);
             this.picLogoClube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,29 +284,29 @@
             // 
             this.lblNomeClube.AutoSize = true;
             this.lblNomeClube.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeClube.Location = new System.Drawing.Point(560, 226);
+            this.lblNomeClube.Location = new System.Drawing.Point(561, 226);
             this.lblNomeClube.Name = "lblNomeClube";
             this.lblNomeClube.Size = new System.Drawing.Size(93, 13);
             this.lblNomeClube.TabIndex = 2;
             this.lblNomeClube.Text = "Nome do Clube";
             // 
-            // label1
+            // lblDataFundacao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(560, 247);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Data de Fundação";
+            this.lblDataFundacao.AutoSize = true;
+            this.lblDataFundacao.Location = new System.Drawing.Point(561, 247);
+            this.lblDataFundacao.Name = "lblDataFundacao";
+            this.lblDataFundacao.Size = new System.Drawing.Size(96, 13);
+            this.lblDataFundacao.TabIndex = 3;
+            this.lblDataFundacao.Text = "Data de Fundação";
             // 
-            // label2
+            // lblNsocios
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(560, 268);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.lblNsocios.AutoSize = true;
+            this.lblNsocios.Location = new System.Drawing.Point(561, 268);
+            this.lblNsocios.Name = "lblNsocios";
+            this.lblNsocios.Size = new System.Drawing.Size(94, 13);
+            this.lblNsocios.TabIndex = 4;
+            this.lblNsocios.Text = "Número de Sócios";
             // 
             // btnSair
             // 
@@ -320,14 +321,24 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // lblNatletas
+            // 
+            this.lblNatletas.AutoSize = true;
+            this.lblNatletas.Location = new System.Drawing.Point(561, 290);
+            this.lblNatletas.Name = "lblNatletas";
+            this.lblNatletas.Size = new System.Drawing.Size(97, 13);
+            this.lblNatletas.TabIndex = 16;
+            this.lblNatletas.Text = "Número de Atletas:";
+            // 
             // frmSobreClube
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 361);
+            this.Controls.Add(this.lblNatletas);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNsocios);
+            this.Controls.Add(this.lblDataFundacao);
             this.Controls.Add(this.lblNomeClube);
             this.Controls.Add(this.picLogoClube);
             this.Controls.Add(this.tabControl1);
@@ -378,8 +389,9 @@
         private System.Windows.Forms.Label lblIdadePresidente;
         private System.Windows.Forms.Button btnEditarPresidente;
         private System.Windows.Forms.Button btnEditarTreinador;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDataFundacao;
+        private System.Windows.Forms.Label lblNsocios;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblNatletas;
     }
 }

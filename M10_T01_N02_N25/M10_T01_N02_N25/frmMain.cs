@@ -1,5 +1,4 @@
-﻿
-//-----------------------------------------------------------
+﻿//-----------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -24,14 +23,15 @@ namespace M10_T01_N02_N25
         public Clube Clube = new Clube();
 
         //-----------------------------------------------------------
-        private frmEditar _edit = new frmEditar("Editar", true);
-        private frmEditar _add = new frmEditar("Adicionar", false);
+        private frmEditar _add = new frmEditar("Adicionar", false, "atleta");
         private frmSobre _sobre = new frmSobre();
         private frmSobreClube _sobreClube = new frmSobreClube();
         private frmPesquisa _pesquisa;
         private bool _autoSave = false;
         private string _filePath = "Clube.xml";
         private Bitmap _defaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
+        private int _nAtletas = 0;
+        private int _nSocios = 0;
 
         //-----------------------------------------------------------
         public frmMain()
@@ -94,9 +94,9 @@ namespace M10_T01_N02_N25
             if (Clube == null) return;
             foreach (var item in Clube.Pessoas)
             {
-                //if (!item.Active)
-                pessoasString.Add(item.ToString());
-                //MessageBox.Show(item.Active.ToString());
+                if (item.Active)
+                    pessoasString.Add(item.ToString());
+                MessageBox.Show(item.Active.ToString());
             }
             lstPessoas.DataSource = pessoasString;
 
@@ -124,7 +124,7 @@ namespace M10_T01_N02_N25
         public void UpdateDados(int index)
         {
             lblNome.Text = "Nome: " + Clube.Pessoas[index].Nome;
-            lblIdade.Text = "Idade: " + Clube.Pessoas[index].Idade.ToString() + " Ano/s";
+            lblIdade.Text = "Idade: " + Clube.Pessoas[index].Idade + " Ano/s";
             lblLocalidade.Text = Clube.Pessoas[index].MoradaPessoa.Localidade;
             lblRua.Text = Clube.Pessoas[index].MoradaPessoa.Rua;
             lblCodigoPostal.Text = Clube.Pessoas[index].MoradaPessoa.CodigoPostal;
@@ -152,6 +152,7 @@ namespace M10_T01_N02_N25
                     File.Delete("ProfilePhotos/" + i + "_Bck.jpg");
             }
 
+            Util.GC_CLEANUP();
             if (File.Exists("ProfilePhotos/" + "Presidente" + "_Bck.jpg"))
                 File.Delete("ProfilePhotos/" + "Presidente" + "_Bck.jpg");
             if (File.Exists("ProfilePhotos/" + "Treinador" + "_Bck.jpg"))
@@ -187,6 +188,17 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void clubeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _nAtletas = 0;
+            _nSocios = 0;
+            foreach (var item in Clube.Pessoas)
+            {
+                if (item is Atleta)
+                    _nAtletas++;
+                else if (item is Socio)
+                    _nSocios++;
+            }
+            _sobreClube.nAtletas = _nAtletas;
+            _sobreClube.nSocios = _nSocios;
             _sobreClube.ShowDialog();
         }
 
@@ -228,14 +240,19 @@ namespace M10_T01_N02_N25
         #region BTN
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            //Util.GC_CLEANUP();
-            var edit = new frmEditar("Editar", true);
+            Util.GC_CLEANUP();
+            string type = null;
+            if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
+                type = "socio";
+            else
+                type = "atleta";
+
+            var edit = new frmEditar("Editar", true, type);
             edit.Selected = lstPessoas.SelectedIndex;
             edit.ClearField();
             edit.DadosPessoa = Clube.Pessoas[lstPessoas.SelectedIndex];
             //var image = new Bitmap(picMFfotoPerfil.Image);
             edit.picFotoPerfil.Image = picMFfotoPerfil.Image;
-            var startName = edit.DadosPessoa.Nome;
             DialogResult result = edit.ShowDialog();
 
             if (result == DialogResult.OK)
@@ -243,9 +260,9 @@ namespace M10_T01_N02_N25
                 if (Clube.Pessoas[lstPessoas.SelectedIndex] is Atleta)
                 {
                     var pess = edit.DadosPessoa;
-                    var bystander = new Atleta(pess.Nome,pess.DataNasc, pess.MoradaPessoa, 0, true);
+                    var bystander = new Atleta(pess.Nome, pess.DataNasc, pess.MoradaPessoa, 0, true);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
-                    UpdateDados(lstPessoas.SelectedIndex); 
+                    UpdateDados(lstPessoas.SelectedIndex);
                 }
                 else if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
                 {
@@ -255,7 +272,7 @@ namespace M10_T01_N02_N25
                     UpdateDados(lstPessoas.SelectedIndex);
                 }
             }
-            edit.picFotoPerfil.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
+            edit.picFotoPerfil.Image = _defaultProfilePic;
             UpdateLb();
         }
 
@@ -302,7 +319,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            var settings = new XmlWriterSettings {Indent = true};
+            var settings = new XmlWriterSettings { Indent = true };
 
             using (var writer = XmlWriter.Create(_filePath, settings))
             {

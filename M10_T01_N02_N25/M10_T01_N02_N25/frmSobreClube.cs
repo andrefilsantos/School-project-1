@@ -1,6 +1,9 @@
 ﻿//-----------------------------------------------------------
 using System;
+using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
+using M10_T01_N02_N25.Properties;
 
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
@@ -8,10 +11,13 @@ namespace M10_T01_N02_N25
     //-----------------------------------------------------------
     public partial class frmSobreClube : Form
     {
-        //TODO: Total shareholders / Athletes
         //TODO: Pictures President / Coach
-        
-            //-----------------------------------------------------------
+
+
+        public int nSocios;
+        public int nAtletas;
+
+        //-----------------------------------------------------------
         public frmSobreClube()
         {
             InitializeComponent();
@@ -20,21 +26,24 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void frmSobreOClube_Load(object sender, EventArgs e)
         {
-            /*if (File.Exists("ProfilePhotos/" + Clube.Nome + "_Logo.png"))
+            if (File.Exists("ProfilePhotos/" + Clube.Nome + "_Logo.png"))
                 picLogoClube.Image = new Bitmap("ProfilePhotos/" + Clube.Nome + "_Logo.png");
             else
             {
                 picLogoClube.Image = new Bitmap(Resources._5168fb83e1e34e0381bb67a80527c464_800);
-            }*/
+            }
             lblNomeClube.Text = Clube.Nome;
-            //Duplicate();
+            lblDataFundacao.Text = "Data de Fundação: " + Clube.DataFundacao.ToString("dd/MM/yyyy");
+            lblNsocios.Text = "Número de Sócios: " + nSocios;
+            lblNatletas.Text = "Número de Atletas: " + nAtletas;
+            Backups();
             UpdateDados();
         }
 
         //-----------------------------------------------------------
         private void btnEditarPresidente_Click(object sender, EventArgs e)
         {
-            var edit = new frmEditar("Editar", true) { DadosPessoa = Clube.Presidente};
+            var edit = new frmEditar("Editar", true, "presidente") { DadosPessoa = Clube.Presidente };
             var startName = Clube.Presidente.Nome;
             var result = edit.ShowDialog();
 
@@ -60,18 +69,18 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        /*void Duplicate()
+        void Backups()
         {
-            if (!File.Exists("ProfilePhotos/" + Clube.Presidente.Nome + "_MF.jpg") && File.Exists("ProfilePhotos/" + Clube.Presidente.Nome + ".jpg"))
+            if (!File.Exists("ProfilePhotos/Presidente_Bck.jpg") && File.Exists("ProfilePhotos/Presidente.jpg"))
             {
-                File.Copy("ProfilePhotos/" + Clube.Presidente.Nome + ".jpg", "ProfilePhotos/" + Clube.Presidente.Nome + "_MF.jpg");
+                File.Copy("ProfilePhotos/Presidente.jpg", "ProfilePhotos/Presidente_Bck.jpg");
             }
 
-            if (!File.Exists("ProfilePhotos/" + Atleta.Treinador.Nome + "_MF.jpg") && File.Exists("ProfilePhotos/" + Atleta.Treinador.Nome + ".jpg"))
+            if (!File.Exists("ProfilePhotos/Treinador_Bck.jpg") && File.Exists("ProfilePhotos/Treinador.jpg"))
             {
-                File.Copy("ProfilePhotos/" + Atleta.Treinador.Nome + ".jpg", "ProfilePhotos/" + Atleta.Treinador.Nome + "_MF.jpg");
+                File.Copy("ProfilePhotos/Treinador.jpg", "ProfilePhotos/Treinador_Bck.jpg");
             }
-        }*/
+        }
 
         //-----------------------------------------------------------
         void UpdateDados()
@@ -81,10 +90,10 @@ namespace M10_T01_N02_N25
             lblRuaPresidente.Text = Clube.Presidente.MoradaPessoa.Rua;
             lblLocalidadePresidente.Text = Clube.Presidente.MoradaPessoa.Localidade;
             lblCpPresidente.Text = Clube.Presidente.MoradaPessoa.CodigoPostal;
-            /*if (File.Exists("ProfilePhotos/" + Clube.Presidente.Nome + "_MF.jpg"))
-                picFotoPerfilPresidente.Image = new Bitmap("ProfilePhotos/" + Clube.Presidente.Nome + "_MF.jpg");
+            if (File.Exists("ProfilePhotos/Presidente_Bck.jpg"))
+                picFotoPerfilPresidente.Image = new Bitmap("ProfilePhotos/Presidente_Bck.jpg");
             else
-                picFotoPerfilPresidente.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");*/
+                picFotoPerfilPresidente.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
 
             //-----------------------------------------------------------
             lblNomeTreinador.Text = "Nome: " + Atleta.Treinador.Nome;
@@ -92,16 +101,16 @@ namespace M10_T01_N02_N25
             lblRuaTreinador.Text = Atleta.Treinador.MoradaPessoa.Rua;
             lblLocalidadeTreinador.Text = Atleta.Treinador.MoradaPessoa.CodigoPostal;
             lblCpTreinador.Text = Atleta.Treinador.MoradaPessoa.CodigoPostal;
-            /*if (File.Exists("ProfilePhotos/" + Atleta.Treinador.Nome + "_MF.jpg"))
-                picFotoPerfilTreinador.Image = new Bitmap("ProfilePhotos/" + Atleta.Treinador.Nome + "_MF.jpg");
+            if (File.Exists("ProfilePhotos/Treinador_Bck.jpg"))
+                picFotoPerfilTreinador.Image = new Bitmap("ProfilePhotos/Treinador_Bck.jpg");
             else
-                picFotoPerfilTreinador.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");*/
+                picFotoPerfilTreinador.Image = new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
         }
 
         //-----------------------------------------------------------
         private void btnEditarTreinador_Click(object sender, EventArgs e)
         {
-            var edit = new frmEditar("Editar", true) { DadosPessoa = Atleta.Treinador };
+            var edit = new frmEditar("Editar", true, "treinador") { DadosPessoa = Atleta.Treinador };
             var startName = Atleta.Treinador.Nome;
             var result = edit.ShowDialog();
             if (result == DialogResult.OK)

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 
 //-----------------------------------------------------------
@@ -72,7 +69,8 @@ namespace M10_T01_N02_N25
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
             IsActive = Convert.ToBoolean(reader.GetAttribute("Active"));
-            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + _peso);
+            MessageBox.Show("Socio.cs  " + IsActive);
+            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + _peso + " " + IsActive);
         }
 
         //-----------------------------------------------------------

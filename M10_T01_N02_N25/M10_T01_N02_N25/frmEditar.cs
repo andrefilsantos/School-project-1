@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Odbc;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Runtime.Remoting.Channels;
-using static System.Windows.Forms.MessageBox;
 
 namespace M10_T01_N02_N25
 {
@@ -22,12 +13,17 @@ namespace M10_T01_N02_N25
         public int Selected;
 
         //-----------------------------------------------------------
-        public frmEditar(string nome, bool isEditar)
+        public frmEditar(string nome, bool isEditar, string type)
         {
             InitializeComponent();
             Text = nome;
             cboTipo.SelectedIndex = 0;
             cboTipo.Enabled = !isEditar;
+
+            if (type == "socio" || type == "presidente" || type == "treinador")
+                txtPeso.Enabled = false;
+            else
+                txtPeso.Enabled = true;
         }
 
         //-----------------------------------------------------------
@@ -55,17 +51,16 @@ namespace M10_T01_N02_N25
                     MoradaPessoa = new Morada(txtRua.Text, txtLocalidade.Text, mskCodigoPostal.Text),
                     DataNasc = new DateTime()
                 };
+
                 var converteuOk = DateTime.TryParse(mskData.Text, out _data);
 
-                dados.DataNasc = !converteuOk ? _data : DateTime.Now;
-
-                Console.WriteLine(dados.DataNasc);
+                dados.DataNasc = converteuOk ? _data : DateTime.Now;
 
                 if (!_changePhoto) return dados;
                 if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
                 {
                     //Dispose();
-                    Util.GC_CLEANUP();
+                    //Util.GC_CLEANUP();
                     File.Delete("ProfilePhotos/" + Selected + ".jpg");
                 }
                 var image = new Bitmap(picFotoPerfil.Image);
@@ -161,8 +156,10 @@ namespace M10_T01_N02_N25
             };
             var dr = changeImg.ShowDialog();
             if (dr != DialogResult.Cancel)
+            {
                 picFotoPerfil.Image = Image.FromFile(changeImg.FileName);
-            _changePhoto = true;
+                _changePhoto = true;
+            }
         }
     }
 }
