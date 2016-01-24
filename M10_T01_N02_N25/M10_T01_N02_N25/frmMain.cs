@@ -28,8 +28,8 @@ namespace M10_T01_N02_N25
         private frmSobreClube _sobreClube = new frmSobreClube();
         private frmPesquisa _pesquisa;
         private bool _autoSave = false;
-        private string _filePath = "Clube.xml";
-        private Bitmap _defaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
+        private const string FilePath = "Clube.xml";
+        private readonly Bitmap _defaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
         private int _nAtletas = 0;
         private int _nSocios = 0;
 
@@ -44,7 +44,7 @@ namespace M10_T01_N02_N25
         {
             _add.IsSet += IsDataSet;
 
-            if (File.Exists(_filePath))
+            if (File.Exists(FilePath))
             {
                 Console.WriteLine("Loading Existing File...");
                 loadToolStripMenuItem.PerformClick();
@@ -94,9 +94,9 @@ namespace M10_T01_N02_N25
             if (Clube == null) return;
             foreach (var item in Clube.Pessoas)
             {
-                if (item.Active)
+                //if (item.Active)
                     pessoasString.Add(item.ToString());
-                MessageBox.Show(item.Active.ToString());
+                //MessageBox.Show(item.Active.ToString());
             }
             lstPessoas.DataSource = pessoasString;
 
@@ -212,7 +212,7 @@ namespace M10_T01_N02_N25
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Clube.Pessoas.Clear();
-            using (var reader = XmlReader.Create(_filePath))
+            using (var reader = XmlReader.Create(FilePath))
             {
                 while (reader.Read())
                 {
@@ -321,7 +321,7 @@ namespace M10_T01_N02_N25
         {
             var settings = new XmlWriterSettings { Indent = true };
 
-            using (var writer = XmlWriter.Create(_filePath, settings))
+            using (var writer = XmlWriter.Create(FilePath, settings))
             {
                 writer.WriteStartDocument();
                 Clube.Write(writer);

@@ -70,19 +70,19 @@ namespace M10_T01_N02_N25
                     case "Atleta":
                         var at = new Atleta();
                         at.Read(reader);
-                        MessageBox.Show("Clube.cs " + at.Active);
+                        //MessageBox.Show("Clube.cs " + at.Active);
                         _pessoas.Add(at);
                         break;
                     case "Pessoa":
                         var ps = new Pessoa();
                         ps.Read(reader);
-                        MessageBox.Show("Clube.cs " + ps.Active);
+                        //MessageBox.Show("Clube.cs " + ps.Active);
                         _pessoas.Add(ps);
                         break;
                     case "Socio":
                         var sc = new Socio();
                         sc.Read(reader);
-                        MessageBox.Show("Clube.cs " + sc.Active);
+                        //MessageBox.Show("Clube.cs " + sc.Active);
                         _pessoas.Add(sc);
                         break;
                 }

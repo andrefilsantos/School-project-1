@@ -69,7 +69,7 @@ namespace M10_T01_N02_N25
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
             IsActive = Convert.ToBoolean(reader.GetAttribute("Active"));
-            MessageBox.Show("Socio.cs  " + IsActive);
+            //MessageBox.Show("Socio.cs  " + IsActive);
             Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + _peso + " " + IsActive);
         }
 

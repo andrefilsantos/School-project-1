@@ -43,29 +43,30 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnEditarPresidente_Click(object sender, EventArgs e)
         {
-            var edit = new frmEditar("Editar", true, "presidente") { DadosPessoa = Clube.Presidente };
-            var startName = Clube.Presidente.Nome;
-            var result = edit.ShowDialog();
+            var login = new frmLogin();
+            login.ShowDialog();
+            if (login.DialogResult == DialogResult.OK)
+            {
+                if (login.username == "Administrator" && login.password == "oaefeott")
+                {
+                    var edit = new frmEditar("Editar", true, "presidente") { DadosPessoa = Clube.Presidente };
+                    var startName = Clube.Presidente.Nome;
+                    var result = edit.ShowDialog();
 
-            if (result == DialogResult.OK)
-            {
-                Clube.Presidente.Nome = edit.DadosPessoa.Nome;
-                Clube.Presidente.DataNasc = edit.DadosPessoa.DataNasc;
-                Clube.Presidente.MoradaPessoa = edit.DadosPessoa.MoradaPessoa;
-                UpdateDados();
+                    if (result == DialogResult.OK)
+                    {
+                        Clube.Presidente.Nome = edit.DadosPessoa.Nome;
+                        Clube.Presidente.DataNasc = edit.DadosPessoa.DataNasc;
+                        Clube.Presidente.MoradaPessoa = edit.DadosPessoa.MoradaPessoa;
+                        UpdateDados();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Utilizador ou Password Incorretos.\nPor favor, contacte o administrador do sistema para obter os dados.", "Login", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
-            /*try
-            {
-                Util.GC_CLEANUP();
-                File.Move("ProfilePhotos/" + startName + "_MF.jpg", "ProfilePhotos/" + Clube.Presidente.Nome + "_MF.jpg");
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Erro...", "", MessageBoxButtons.OK);
-                throw;
-            }*/
-            UpdateDados();
         }
 
         //-----------------------------------------------------------
@@ -110,28 +111,28 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnEditarTreinador_Click(object sender, EventArgs e)
         {
-            var edit = new frmEditar("Editar", true, "treinador") { DadosPessoa = Atleta.Treinador };
-            var startName = Atleta.Treinador.Nome;
-            var result = edit.ShowDialog();
-            if (result == DialogResult.OK)
+            var login = new frmLogin();
+            login.ShowDialog();
+            if (login.DialogResult == DialogResult.OK)
             {
-                Atleta.Treinador.Nome = edit.DadosPessoa.Nome;
-                Atleta.Treinador.DataNasc = edit.DadosPessoa.DataNasc;
-                Atleta.Treinador.MoradaPessoa = edit.DadosPessoa.MoradaPessoa;
-                UpdateDados();
+                if (login.username == "Administrator" && login.password == "oaefeott")
+                {
+                    var edit = new frmEditar("Editar", true, "treinador") { DadosPessoa = Atleta.Treinador };
+                    var result = edit.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        Atleta.Treinador.Nome = edit.DadosPessoa.Nome;
+                        Atleta.Treinador.DataNasc = edit.DadosPessoa.DataNasc;
+                        Atleta.Treinador.MoradaPessoa = edit.DadosPessoa.MoradaPessoa;
+                        UpdateDados();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Utilizador ou Password Incorretos \nPor favor, contacte o administrador do sistema para obter os dados.", "Login", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
-            /*try
-            {
-                Util.GC_CLEANUP();
-                File.Move("ProfilePhotos/" + startName + "_MF.jpg", "ProfilePhotos/" + Atleta.Treinador.Nome + "_MF.jpg");
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Erro...", "", MessageBoxButtons.OK);
-                throw;
-            }*/
-            UpdateDados();
         }
 
         //-----------------------------------------------------------

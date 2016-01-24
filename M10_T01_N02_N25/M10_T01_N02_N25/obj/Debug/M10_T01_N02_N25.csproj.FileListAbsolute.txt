@@ -11,3 +11,4 @@ C:\Users\André\Documents\GitHub\School-project-1\M10_T01_N02_N25\M10_T01_N02_N2
 C:\Users\André\Documents\GitHub\School-project-1\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.csproj.GenerateResource.Cache
 C:\Users\André\Documents\GitHub\School-project-1\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.exe
 C:\Users\André\Documents\GitHub\School-project-1\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.pdb
+C:\Users\André\Documents\GitHub\School-project-1\M10_T01_N02_N25\M10_T01_N02_N25\obj\Debug\M10_T01_N02_N25.frmLogin.resources
