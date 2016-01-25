@@ -16,7 +16,7 @@ namespace M10_T01_N02_N25
         public Atleta() { }
 
         //-----------------------------------------------------------
-        public Atleta(string _nome, DateTime _dateNasc, Morada _moradaPessoa, double peso, bool _active) : base(_nome, _dateNasc, _moradaPessoa, _active)
+        public Atleta(string _nome, DateTime _dateNasc, Morada _moradaPessoa, double peso, bool _active, int index) : base(_nome, _dateNasc, _moradaPessoa, _active, index)
         {
             _peso = peso;
         }
@@ -24,7 +24,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         static Atleta()
         {
-            Treinador = new Atleta("Rui Carlos Pinho da Vitória", new DateTime(1970, 04, 16), new Morada("Alverca do Ribatejo", "Vila Franca de Xira", "0000-000"), 78, true);
+            Treinador = new Atleta("Rui Carlos Pinho da Vitória", new DateTime(1970, 04, 16), new Morada("Alverca do Ribatejo", "Vila Franca de Xira", "0000-000"), 78, true,0);
         }
 
         //-----------------------------------------------------------
@@ -69,14 +69,14 @@ namespace M10_T01_N02_N25
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
             IsActive = Convert.ToBoolean(reader.GetAttribute("Active"));
-            //MessageBox.Show("Socio.cs  " + IsActive);
-            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + _peso + " " + IsActive);
+            Index = Global.ClubeRef.Pessoas.Count + 1;
+            Console.WriteLine(Nome + " \t" + year + " \t" + month + " \t" + day + " \t" + MoradaPessoa.Rua + " \t" + MoradaPessoa.Localidade + " \t" + MoradaPessoa.CodigoPostal + " \t" + _peso + " \t" + IsActive);
         }
 
         //-----------------------------------------------------------
         public override string ToString()
         {
-            return "[A] " + base.Nome;
+            return "[A] " + Nome + " " + IsActive;
         }
     }
 }

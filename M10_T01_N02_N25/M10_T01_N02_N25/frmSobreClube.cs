@@ -79,7 +79,7 @@ namespace M10_T01_N02_N25
             login.ShowDialog();
             if (login.DialogResult == DialogResult.OK)
             {
-                if (login.username == "Administrator" && login.password == "oaefeott")
+                if (login.Username == "Administrator" && login.Password == "oaefeott")
                 {
                     var edit = new frmEditar("Editar", true, "treinador") { DadosPessoa = Atleta.Treinador };
                     var result = edit.ShowDialog();
@@ -106,7 +106,7 @@ namespace M10_T01_N02_N25
             login.ShowDialog();
             if (login.DialogResult == DialogResult.OK)
             {
-                if (login.username == "Administrator" && login.password == "oaefeott")
+                if (login.Username == "Administrator" && login.Password == "oaefeott")
                 {
                     var edit = new frmEditar("Editar", true, "presidente") { DadosPessoa = Clube.Presidente };
                     var startName = Clube.Presidente.Nome;

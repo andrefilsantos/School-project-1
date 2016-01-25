@@ -82,6 +82,7 @@
     <Compile Include="frmSobreClube.designer.cs">
       <DependentUpon>frmSobreClube.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="interfaces.cs" />
     <Compile Include="Morada.cs" />
     <Compile Include="frmPesquisa.cs">
@@ -123,6 +124,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

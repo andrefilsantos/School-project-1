@@ -41,6 +41,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void formMain_Load(object sender, EventArgs e)
         {
+            Global.SetClube(ref Clube);
             _add.IsSet += IsDataSet;
 
             if (File.Exists(FilePath))
@@ -68,13 +69,17 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void IsDataSet(object sender, EditarEventArgs e)
         {
-            //-----------------------------------------------------------
+            
             var form = (frmEditar)sender;
 
             if (e.Index == 0)
-                Clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso, true));
+            {
+                Clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso, true, Clube.Pessoas.Count + 1));
+            }
             else if (e.Index == 1)
-                Clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, true));
+            {
+                Clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, true, Clube.Pessoas.Count + 1));
+            }
 
             form.ClearField();
             form.Hide();
@@ -89,9 +94,8 @@ namespace M10_T01_N02_N25
             if (Clube == null) return;
             foreach (var item in Clube.Pessoas)
             {
-                //if (item.Active)
-                    pessoasString.Add(item.ToString());
-                //MessageBox.Show(item.Active.ToString());
+                if (item.IsActive)
+                pessoasString.Add(item.ToString());
             }
             lstPessoas.DataSource = pessoasString;
 
@@ -157,11 +161,9 @@ namespace M10_T01_N02_N25
                 Util.GC_CLEANUP();
                 File.Delete("ProfilePhotos/" + "Presidente" + "_Bck.jpg");
             }
-            if (File.Exists("ProfilePhotos/" + "Treinador" + "_Bck.jpg"))
-            { 
-                Util.GC_CLEANUP();
-                File.Delete("ProfilePhotos/" + "Treinador" + "_Bck.jpg");
-            }
+            if (!File.Exists("ProfilePhotos/" + "Treinador" + "_Bck.jpg")) return;
+            Util.GC_CLEANUP();
+            File.Delete("ProfilePhotos/" + "Treinador" + "_Bck.jpg");
         }
 
         //-----------------------------------------------------------
@@ -216,6 +218,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Console.Clear();
             Clube.Pessoas.Clear();
             using (var reader = XmlReader.Create(FilePath))
             {
@@ -265,14 +268,14 @@ namespace M10_T01_N02_N25
                 if (Clube.Pessoas[lstPessoas.SelectedIndex] is Atleta)
                 {
                     var pess = edit.DadosPessoa;
-                    var bystander = new Atleta(pess.Nome, pess.DataNasc, pess.MoradaPessoa, 0, true);
+                    var bystander = new Atleta(pess.Nome, pess.DataNasc, pess.MoradaPessoa, 0, true,pess.Index);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
                     UpdateDados(lstPessoas.SelectedIndex);
                 }
                 else if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
                 {
                     var pess = edit.DadosPessoa;
-                    var bystander = new Socio(pess.Nome, pess.DataNasc, pess.MoradaPessoa, true);
+                    var bystander = new Socio(pess.Nome, pess.DataNasc, pess.MoradaPessoa, true,pess.Index);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
                     UpdateDados(lstPessoas.SelectedIndex);
                 }
@@ -338,7 +341,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-            _pesquisa.ShowDialog();
+            _pesquisa.Show();
         }
 
         //-----------------------------------------------------------
@@ -373,6 +376,9 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void lstPessoas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Console.WriteLine("The Item index = " + Clube.Pessoas[lstPessoas.SelectedIndex].Index);
+            Console.WriteLine("Selected index = " + lstPessoas.SelectedIndex);
+            Console.WriteLine("//-----------------------------------------------------------");
             UpdateDados(lstPessoas.SelectedIndex);
         }
     }

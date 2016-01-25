@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="M10_T01_N02_N25.Atleta" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAEAAAgAAAgAAAAAEAAAAAAAAEAAAA=</HashCode>
+      <FileName>Atleta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.Clube" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAEAQQA=</HashCode>
+      <FileName>Clube.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="M10_T01_N02_N25.EditarEventArgs" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>EditarEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.frmEditar" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAFQABCBBAIQAAECAAcACKghABBAAACwgAAEAYAI=</HashCode>
+      <FileName>frmEditar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.frmLogin" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAIAAACAAAMAAAQCAAAACIEAABABCAhAAAABAAAA=</HashCode>
+      <FileName>frmLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.frmMain" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ETAEmi0AACGgGAggEHCEhQEqKNQmQBwMEXRAAFgJAoA=</HashCode>
+      <FileName>frmMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.frmPesquisa" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAIAAAACAAABAAgBCABAACAIACAAAgAIBAAAAABAA=</HashCode>
+      <FileName>frmPesquisa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.frmSobre" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAoCACAAAAMACAAAgCQAgABAAAAEAQABBAAAA=</HashCode>
+      <FileName>frmSobre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.frmSobreClube" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJBBgIAACAgAABAICCAAABCAJQRQBAAoCZFAYBABAQ=</HashCode>
+      <FileName>frmSobreClube.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.Morada" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAgAAQAAAAAAAAAAAEQAAI=</HashCode>
+      <FileName>Morada.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="M10_T01_N02_N25.Pessoa" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAFAAAEEAAAAAAgAAAAAAQgAAECAAEAAAA=</HashCode>
+      <FileName>Pessoa.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="M10_T01_N02_N25.Program" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.Socio" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAEAAAAAAAgAAAAAAAAgAAAAAEAgAA=</HashCode>
+      <FileName>Socio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.Util" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAABAAAAAAAgAAAAEAAAAAAAAAABA=</HashCode>
+      <FileName>util.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.Properties.Resources" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAACAAIAHBAAAECAADMEAAAQAAAAAAASAIAiCCAYA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M10_T01_N02_N25.Properties.Settings" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="M10_T01_N02_N25.IXmlWritable" Collapsed="true">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="M10_T01_N02_N25.IXmlReadable" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="M10_T01_N02_N25.IsSetHandler" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>util.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

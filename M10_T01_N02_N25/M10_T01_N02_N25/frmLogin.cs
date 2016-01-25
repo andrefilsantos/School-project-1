@@ -12,8 +12,8 @@ namespace M10_T01_N02_N25
 {
     public partial class frmLogin : Form
     {
-        public string username;
-        public string password;
+        public string Username;
+        public string Password;
 
         public frmLogin()
         {
@@ -27,8 +27,8 @@ namespace M10_T01_N02_N25
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            username = txtUsername.Text;
-            password = txtPassword.Text;
+            Username = txtUsername.Text;
+            Password = txtPassword.Text;
             Hide();
         }
     }

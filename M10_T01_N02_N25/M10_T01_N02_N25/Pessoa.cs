@@ -19,7 +19,8 @@ namespace M10_T01_N02_N25
         public string Nome { get; set; }
         public Morada MoradaPessoa { get; set; }
         public bool Active { get; set; }
-        protected bool IsActive = true;
+        public bool IsActive = true;
+        public int Index;
 
         //-----------------------------------------------------------
         public DateTime DataNasc
@@ -56,19 +57,20 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        public Pessoa(string _nome, DateTime _dateNasc, Morada _moradaPessoa, bool _active)
+        public Pessoa(string _nome, DateTime _dateNasc, Morada _moradaPessoa, bool _active, int index)
         {
             Nome = _nome;
             DataNasc = _dateNasc;
             MoradaPessoa = _moradaPessoa; ;
             Idade = CalculaIdade();
             Active = _active;
+            Index = index;
         }
 
         //-----------------------------------------------------------
         public override string ToString()
         {
-            return "[P] " + Nome;
+            return "[P] " + Nome + " " + IsActive;
         }
 
         //-----------------------------------------------------------
@@ -81,8 +83,8 @@ namespace M10_T01_N02_N25
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
             IsActive = Convert.ToBoolean(reader.GetAttribute("Active"));
-            //MessageBox.Show("Pessoa.cs " + IsActive);
-            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal);
+            Index = Global.ClubeRef.Pessoas.Count + 1;
+            Console.WriteLine(Nome + " \t" + year + " \t" + month + " \t" + day + " \t" + MoradaPessoa.Rua + " \t" + MoradaPessoa.Localidade + " \t" + MoradaPessoa.CodigoPostal);
         }
 
         //-----------------------------------------------------------

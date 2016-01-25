@@ -17,7 +17,7 @@ namespace M10_T01_N02_N25
         private int _numSocio;
 
         //-----------------------------------------------------------
-        public Socio(string _nome, DateTime _dateNasc, Morada _moradaPessoa, bool _active) : base(_nome, _dateNasc, _moradaPessoa, _active)
+        public Socio(string _nome, DateTime _dateNasc, Morada _moradaPessoa, bool _active, int index) : base(_nome, _dateNasc, _moradaPessoa, _active, index)
         {
             _numSocio = _sociosCount + 1;
             _sociosCount++;
@@ -39,7 +39,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         public override string ToString()
         {
-            return "[S] " + base.Nome;
+            return "[S] " + base.Nome + " " + IsActive;
         }
 
         //-----------------------------------------------------------
@@ -71,8 +71,8 @@ namespace M10_T01_N02_N25
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
             IsActive = Convert.ToBoolean(reader.GetAttribute("Active"));
-            //MessageBox.Show("Socio.cs  " + IsActive);
-            Console.WriteLine(Nome + " " + year + " " + month + " " + day + " " + MoradaPessoa.Rua + " " + MoradaPessoa.Localidade + " " + MoradaPessoa.CodigoPostal + " " + _numSocio + " " + IsActive);
+            Index = Global.ClubeRef.Pessoas.Count + 1;
+            Console.WriteLine(Nome + " \t" + year + " \t" + month + " \t" + day + " \t" + MoradaPessoa.Rua + " \t" + MoradaPessoa.Localidade + " \t" + MoradaPessoa.CodigoPostal + " \t" + _numSocio + " \t" + IsActive);
         }
 
     }

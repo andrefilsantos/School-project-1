@@ -21,7 +21,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
         }
 
         //-----------------------------------------------------------
