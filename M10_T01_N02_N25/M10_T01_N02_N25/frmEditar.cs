@@ -10,7 +10,9 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private DateTime _data;
         private bool _changePhoto;
+        private bool _isEditar;
         public int Selected;
+
 
         //-----------------------------------------------------------
         public frmEditar(string nome, bool isEditar, string type)
@@ -19,7 +21,7 @@ namespace M10_T01_N02_N25
             Text = nome;
             cboTipo.SelectedIndex = 0;
             cboTipo.Enabled = !isEditar;
-
+            _isEditar = isEditar;
             if (type == "socio" || type == "presidente" || type == "treinador")
                 txtPeso.Enabled = false;
             else
@@ -57,6 +59,7 @@ namespace M10_T01_N02_N25
                 dados.DataNasc = converteuOk ? _data : DateTime.Now;
 
                 if (!_changePhoto) return dados;
+                if (!_isEditar) Selected = Global.ClubeRef.Pessoas.Count + 1;
                 if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
                 {
                     //Dispose();
@@ -161,6 +164,12 @@ namespace M10_T01_N02_N25
                 picFotoPerfil.Image = Image.FromFile(changeImg.FileName);
                 _changePhoto = true;
             }
+        }
+
+        private void txtPeso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
         }
     }
 }

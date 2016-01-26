@@ -5,11 +5,10 @@ using System.Windows.Forms;
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
 {
-    //TODO: Do advanced search
-
     //-----------------------------------------------------------
-    public partial class frmPesquisa : Form 
+    public partial class frmPesquisa : Form
     {
+        private List<string> resultadoPesquisa = new List<string>();
         private Clube _clube;
         //-----------------------------------------------------------
         public frmPesquisa(ref Clube clube)
@@ -27,6 +26,8 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void frmPesquisa_Load(object sender, EventArgs e)
         {
+            cboPesquisaPor.SelectedIndex = 0;
+            cboComoPesquisar.SelectedIndex = 0;
             Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text).ToUpper()));
         }
 
@@ -66,6 +67,44 @@ namespace M10_T01_N02_N25
             {
                 e.Cancel = true;
                 Hide();
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            switch (cboPesquisaPor.SelectedIndex)
+            {
+                case 0: //Nome
+                    foreach (var item in Global.ClubeRef.Pessoas)
+                    {
+                        if (item.Nome == txtPesquisaAvancada.Text)
+                        {
+                            resultadoPesquisa.Add(item.ToString());
+                            lstResultadosAvancados.DataSource = resultadoPesquisa;
+                        }
+                    }
+                    break;
+                case 1: //Rua
+                    break;
+                case 2: //Localidade
+                    break;
+                case 3: //Código Postal
+                    break;
+                case 4: //Idade
+                    break;
+                case 5: //Peso
+                    break;
+                case 6: //Número de sócio
+                    break;
+            }
+        }
+
+        private void cboPesquisaPor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboPesquisaPor.SelectedIndex == 0)
+            {
+                cboComoPesquisar.Visible = false;
+                //txtPesquisaAvancada.Size = Size
             }
         }
     }

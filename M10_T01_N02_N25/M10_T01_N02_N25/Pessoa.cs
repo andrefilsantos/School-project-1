@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
-using System.Threading;
-using System.Windows.Forms;
 
 //-----------------------------------------------------------
 namespace M10_T01_N02_N25
@@ -21,6 +15,7 @@ namespace M10_T01_N02_N25
         public bool Active { get; set; }
         public bool IsActive = true;
         public int Index;
+        public int index;
 
         //-----------------------------------------------------------
         public DateTime DataNasc
@@ -70,7 +65,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         public override string ToString()
         {
-            return "[P] " + Nome + " " + IsActive;
+            return "[P] " + Nome /*+ " " + IsActive*/;
         }
 
         //-----------------------------------------------------------

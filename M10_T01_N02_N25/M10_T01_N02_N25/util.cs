@@ -18,7 +18,7 @@ namespace M10_T01_N02_N25
 
         //-----------------------------------------------------------
         public static string BoolToStringAdj(bool val) => val ? "ligado" : "desligado";
-        public static string BoolToStringVrb(bool val) => val ? "liga-lo" : "desliga-lo";
+        public static string BoolToStringVrb(bool val) => val ? "ligá-lo" : "desligá-lo";
         public static string BoolToStringStatus(bool val) => val ? "Enable" : "Disable";
 
         //From: http://www.siao2.com/2007/05/14/2629747.aspx---------

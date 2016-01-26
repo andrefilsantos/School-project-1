@@ -39,7 +39,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         public override string ToString()
         {
-            return "[S] " + base.Nome + " " + IsActive;
+            return "[S] " + base.Nome /*+ " " + IsActive*/;
         }
 
         //-----------------------------------------------------------

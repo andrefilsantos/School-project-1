@@ -76,7 +76,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         public override string ToString()
         {
-            return "[A] " + Nome + " " + IsActive;
+            return "[A] " + Nome /*+ " " + IsActive*/;
         }
     }
 }

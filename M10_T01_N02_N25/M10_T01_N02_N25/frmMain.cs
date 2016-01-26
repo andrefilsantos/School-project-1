@@ -31,6 +31,7 @@ namespace M10_T01_N02_N25
         private readonly Bitmap _defaultProfilePic = new Bitmap(Resources.DefaultProfilePhoto);
         private int _nAtletas;
         private int _nSocios;
+        private int _totalPessoasString;
 
         //-----------------------------------------------------------
         public frmMain()
@@ -69,7 +70,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void IsDataSet(object sender, EditarEventArgs e)
         {
-            
+
             var form = (frmEditar)sender;
 
             if (e.Index == 0)
@@ -95,7 +96,7 @@ namespace M10_T01_N02_N25
             foreach (var item in Clube.Pessoas)
             {
                 if (item.IsActive)
-                pessoasString.Add(item.ToString());
+                    pessoasString.Add(item.ToString());
             }
             lstPessoas.DataSource = pessoasString;
 
@@ -122,6 +123,7 @@ namespace M10_T01_N02_N25
             {
                 saveToolStripMenuItem.PerformClick();
             }
+            _totalPessoasString = pessoasString.Count();
         }
 
         //-----------------------------------------------------------
@@ -237,7 +239,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void AutoSaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("O Auto Save encontra-se " + Util.BoolToStringAdj(_autoSave) + ", pretende " + Util.BoolToStringVrb(!_autoSave) + "?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            var res = MessageBox.Show("O Auto Save encontra-se " + Util.BoolToStringAdj(_autoSave) + ".\nPretende " + Util.BoolToStringVrb(!_autoSave) + "?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (res == DialogResult.OK)
                 _autoSave = !_autoSave;
         }
@@ -250,32 +252,32 @@ namespace M10_T01_N02_N25
         {
             Util.GC_CLEANUP();
             string type = null;
-            if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
+            if (Clube.Pessoas[Clube.Pessoas[lstPessoas.SelectedIndex].Index] is Socio)
                 type = "socio";
             else
                 type = "atleta";
 
             var edit = new frmEditar("Editar", true, type);
-            edit.Selected = lstPessoas.SelectedIndex;
+            edit.Selected = Clube.Pessoas[lstPessoas.SelectedIndex].Index;
             edit.ClearField();
-            edit.DadosPessoa = Clube.Pessoas[lstPessoas.SelectedIndex];
+            edit.DadosPessoa = Clube.Pessoas[Clube.Pessoas[lstPessoas.SelectedIndex].Index];
             //var image = new Bitmap(picMFfotoPerfil.Image);
             edit.picFotoPerfil.Image = picMFfotoPerfil.Image;
             DialogResult result = edit.ShowDialog();
 
             if (result == DialogResult.OK)
             {
-                if (Clube.Pessoas[lstPessoas.SelectedIndex] is Atleta)
+                if (Clube.Pessoas[Clube.Pessoas[lstPessoas.SelectedIndex].Index] is Atleta)
                 {
                     var pess = edit.DadosPessoa;
-                    var bystander = new Atleta(pess.Nome, pess.DataNasc, pess.MoradaPessoa, 0, true,pess.Index);
+                    var bystander = new Atleta(pess.Nome, pess.DataNasc, pess.MoradaPessoa, 0, true, pess.Index);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
                     UpdateDados(lstPessoas.SelectedIndex);
                 }
-                else if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
+                else if (Clube.Pessoas[Clube.Pessoas[lstPessoas.SelectedIndex].Index] is Socio)
                 {
                     var pess = edit.DadosPessoa;
-                    var bystander = new Socio(pess.Nome, pess.DataNasc, pess.MoradaPessoa, true,pess.Index);
+                    var bystander = new Socio(pess.Nome, pess.DataNasc, pess.MoradaPessoa, true, pess.Index);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
                     UpdateDados(lstPessoas.SelectedIndex);
                 }
@@ -314,14 +316,14 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnProximo_Click(object sender, EventArgs e)
         {
-            if (lstPessoas.SelectedIndex < Clube.Pessoas.Count() - 1)
+            if (lstPessoas.SelectedIndex < _totalPessoasString - 1)
                 lstPessoas.SelectedIndex++;
         }
 
         //-----------------------------------------------------------
         private void btnUltimo_Click(object sender, EventArgs e)
         {
-            lstPessoas.SelectedIndex = Clube.Pessoas.Count() - 1;
+            lstPessoas.SelectedIndex = _totalPessoasString - 1;
         }
 
         //-----------------------------------------------------------

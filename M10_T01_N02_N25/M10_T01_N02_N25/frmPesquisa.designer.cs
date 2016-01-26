@@ -35,8 +35,15 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpgPesquisaSimples = new System.Windows.Forms.TabPage();
             this.tbpgPesquisaAvancada = new System.Windows.Forms.TabPage();
+            this.cboPesquisaPor = new System.Windows.Forms.ComboBox();
+            this.txtPesquisaAvancada = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cboComoPesquisar = new System.Windows.Forms.ComboBox();
+            this.lstResultadosAvancados = new System.Windows.Forms.ListBox();
+            this.lblBrevemente = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tbpgPesquisaSimples.SuspendLayout();
+            this.tbpgPesquisaAvancada.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtPesquisa
@@ -93,6 +100,12 @@
             // 
             // tbpgPesquisaAvancada
             // 
+            this.tbpgPesquisaAvancada.Controls.Add(this.lblBrevemente);
+            this.tbpgPesquisaAvancada.Controls.Add(this.lstResultadosAvancados);
+            this.tbpgPesquisaAvancada.Controls.Add(this.cboComoPesquisar);
+            this.tbpgPesquisaAvancada.Controls.Add(this.btnPesquisar);
+            this.tbpgPesquisaAvancada.Controls.Add(this.txtPesquisaAvancada);
+            this.tbpgPesquisaAvancada.Controls.Add(this.cboPesquisaPor);
             this.tbpgPesquisaAvancada.Location = new System.Drawing.Point(4, 22);
             this.tbpgPesquisaAvancada.Name = "tbpgPesquisaAvancada";
             this.tbpgPesquisaAvancada.Padding = new System.Windows.Forms.Padding(3);
@@ -100,6 +113,76 @@
             this.tbpgPesquisaAvancada.TabIndex = 1;
             this.tbpgPesquisaAvancada.Text = "Pesquisa Avançada";
             this.tbpgPesquisaAvancada.UseVisualStyleBackColor = true;
+            // 
+            // cboPesquisaPor
+            // 
+            this.cboPesquisaPor.FormattingEnabled = true;
+            this.cboPesquisaPor.Items.AddRange(new object[] {
+            "Nome",
+            "Rua",
+            "Localidade",
+            "Código Postal",
+            "Idade",
+            "Peso",
+            "Número de Sócio"});
+            this.cboPesquisaPor.Location = new System.Drawing.Point(7, 7);
+            this.cboPesquisaPor.Name = "cboPesquisaPor";
+            this.cboPesquisaPor.Size = new System.Drawing.Size(144, 21);
+            this.cboPesquisaPor.TabIndex = 0;
+            this.cboPesquisaPor.Visible = false;
+            this.cboPesquisaPor.SelectedIndexChanged += new System.EventHandler(this.cboPesquisaPor_SelectedIndexChanged);
+            // 
+            // txtPesquisaAvancada
+            // 
+            this.txtPesquisaAvancada.Location = new System.Drawing.Point(253, 7);
+            this.txtPesquisaAvancada.Multiline = true;
+            this.txtPesquisaAvancada.Name = "txtPesquisaAvancada";
+            this.txtPesquisaAvancada.Size = new System.Drawing.Size(427, 21);
+            this.txtPesquisaAvancada.TabIndex = 1;
+            this.txtPesquisaAvancada.Visible = false;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(686, 7);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 21);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Visible = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // cboComoPesquisar
+            // 
+            this.cboComoPesquisar.FormattingEnabled = true;
+            this.cboComoPesquisar.Items.AddRange(new object[] {
+            "Igual a",
+            "Superior a",
+            "Inferior a"});
+            this.cboComoPesquisar.Location = new System.Drawing.Point(157, 7);
+            this.cboComoPesquisar.Name = "cboComoPesquisar";
+            this.cboComoPesquisar.Size = new System.Drawing.Size(90, 21);
+            this.cboComoPesquisar.TabIndex = 3;
+            this.cboComoPesquisar.Visible = false;
+            // 
+            // lstResultadosAvancados
+            // 
+            this.lstResultadosAvancados.FormattingEnabled = true;
+            this.lstResultadosAvancados.Location = new System.Drawing.Point(7, 35);
+            this.lstResultadosAvancados.Name = "lstResultadosAvancados";
+            this.lstResultadosAvancados.Size = new System.Drawing.Size(754, 225);
+            this.lstResultadosAvancados.TabIndex = 4;
+            this.lstResultadosAvancados.Visible = false;
+            // 
+            // lblBrevemente
+            // 
+            this.lblBrevemente.AutoSize = true;
+            this.lblBrevemente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrevemente.Location = new System.Drawing.Point(343, 144);
+            this.lblBrevemente.Name = "lblBrevemente";
+            this.lblBrevemente.Size = new System.Drawing.Size(103, 13);
+            this.lblBrevemente.TabIndex = 5;
+            this.lblBrevemente.Text = "BREVEMENTE...";
             // 
             // frmPesquisa
             // 
@@ -120,6 +203,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tbpgPesquisaSimples.ResumeLayout(false);
             this.tbpgPesquisaSimples.PerformLayout();
+            this.tbpgPesquisaAvancada.ResumeLayout(false);
+            this.tbpgPesquisaAvancada.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -132,5 +217,11 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tbpgPesquisaSimples;
         private System.Windows.Forms.TabPage tbpgPesquisaAvancada;
+        private System.Windows.Forms.TextBox txtPesquisaAvancada;
+        private System.Windows.Forms.ComboBox cboPesquisaPor;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.ComboBox cboComoPesquisar;
+        private System.Windows.Forms.ListBox lstResultadosAvancados;
+        private System.Windows.Forms.Label lblBrevemente;
     }
 }
