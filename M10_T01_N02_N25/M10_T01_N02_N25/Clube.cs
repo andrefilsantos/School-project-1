@@ -43,7 +43,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         static Clube()
         {
-            Presidente = new Socio("Luís Filipe Vieira", new DateTime(1964, 7, 24), new Morada("Sé Nova", "Coimbra", "6969-069"), true,0);
+            Presidente = new Socio("Luís Filipe Vieira", new DateTime(1964, 7, 24), new Morada("Sé Nova", "Coimbra", "6969-069"));
             Nome = "Sport Lisboa e Benfica";
             DataFundacao = new DateTime(1904,02,28);
         }

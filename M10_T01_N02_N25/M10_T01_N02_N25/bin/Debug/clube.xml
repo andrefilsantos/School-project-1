@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Clube>
-  <Atleta Nome="Engenheiro José Sócrates" Peso="87" Dia="6" Mes="9" Ano="1957" Rua="Nº 33 da rua abade faria" Localidade="Lisboa" CodigoPostoal="1900-003" Active="True" />
-  <Socio Nome="O Bob The Builder" CodSocio="2" Dia="7" Mes="3" Ano="1950" Rua="Comboios" Localidade="Lisboa" CodigoPostoal="1923-02" Active="False" />
-  <Atleta Nome="Cenas" Peso="2" Dia="1" Mes="1" Ano="1999" Rua="o" Localidade="k" CodigoPostoal="n" Active="True" />
-  <Socio Nome="Ceninhas" CodSocio="2" Dia="1" Mes="1" Ano="1999" Rua="o" Localidade="k" CodigoPostoal="n" Active="True" />
-  <Atleta Nome="Ceninhas frsdsvdfdd" Peso="123" Dia="1" Mes="1" Ano="1999" Rua="oewewewewewewew" Localidade="kewew" CodigoPostoal="nfd" Active="True" />
-  <Socio Nome="Bob" CodSocio="5" Dia="4" Mes="9" Ano="1999" Rua="coiso" Localidade="3" CodigoPostoal="3333-333" Active="True" />
+  <Atleta Nome="Engenheiro José Sócrates" Peso="69" Dia="6" Mes="9" Ano="1957" Rua="Nº 33 da rua abade faria" Localidade="Lisboa" CodigoPostoal="1900-003" />
+  <Socio Nome="Engenheiro Teach Almeida" CodSocio="2" Dia="3" Mes="3" Ano="1166" Rua="Rua das bocas :D" Localidade="Boca land" CodigoPostoal="5050-505" />
+  <Atleta Nome="Diogo" Peso="999" Dia="29" Mes="6" Ano="1999" Rua="Diogo Street" Localidade="Diogo Lang" CodigoPostoal="3500-541" />
 </Clube>

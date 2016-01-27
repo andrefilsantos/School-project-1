@@ -59,7 +59,7 @@ namespace M10_T01_N02_N25
                 dados.DataNasc = converteuOk ? _data : DateTime.Now;
 
                 if (!_changePhoto) return dados;
-                if (!_isEditar) Selected = Global.ClubeRef.Pessoas.Count + 1;
+                if (!_isEditar) Selected = Global.ClubeRef.Pessoas.Count;
                 if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
                 {
                     //Dispose();
@@ -67,6 +67,7 @@ namespace M10_T01_N02_N25
                     File.Delete("ProfilePhotos/" + Selected + ".jpg");
                 }
                 var image = new Bitmap(picFotoPerfil.Image);
+
                 image.Save("ProfilePhotos/" + Selected + ".jpg");
                 MessageBox.Show("Imagem guardada com Sucesso!", "Imagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return dados;
@@ -156,7 +157,7 @@ namespace M10_T01_N02_N25
             var changeImg = new OpenFileDialog
             {
                 Title = "Editar > Foto de Perfil",
-                Filter = "Apenas Imagens. |*jpg"
+                Filter = "Apenas Imagens. |*jpg; *jpeg"
             };
             var dr = changeImg.ShowDialog();
             if (dr != DialogResult.Cancel)

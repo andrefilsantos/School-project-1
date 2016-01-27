@@ -103,7 +103,7 @@ namespace M10_T01_N02_N25
         {
             if (cboPesquisaPor.SelectedIndex == 0)
             {
-                cboComoPesquisar.Visible = false;
+                //cboComoPesquisar.Visible = false;
                 //txtPesquisaAvancada.Size = Size
             }
         }
