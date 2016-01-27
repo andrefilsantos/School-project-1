@@ -53,6 +53,9 @@ namespace M10_T01_N02_N25
 
             UpdateLb();
             _pesquisa = new frmPesquisa(ref Clube);
+#if DEBUG
+            btnPesquisa.PerformClick();
+#endif
         }
 
         //-----------------------------------------------------------

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 //-----------------------------------------------------------
@@ -28,13 +29,13 @@ namespace M10_T01_N02_N25
         {
             cboPesquisaPor.SelectedIndex = 0;
             cboComoPesquisar.SelectedIndex = 0;
-            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text).ToUpper()));
+            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text).ToUpper()), lstResultados);
         }
 
         //-----------------------------------------------------------
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text).ToUpper()));
+            Update(SearchByName(Util.RemoveDiacritics(txtPesquisa.Text).ToUpper()), lstResultados);
         }
 
         //-----------------------------------------------------------
@@ -50,14 +51,38 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        private void Update(List<int> indexes)
+        private List<int> SearchByStreet(string street)
+        {
+            List<int> pessoasIndex = new List<int>();
+
+            for (int i = 0; i < _clube.Pessoas.Count; i++)
+                if (_clube.Pessoas[i].MoradaPessoa.Rua.ToUpper().Contains(street))
+                    pessoasIndex.Add(i);
+
+            return pessoasIndex;
+        }
+
+        //-----------------------------------------------------------
+        private List<int> SearchByCity(string city)
+        {
+            List<int> pessoasIndex = new List<int>();
+
+            for (int i = 0; i < _clube.Pessoas.Count; i++)
+                if (_clube.Pessoas[i].MoradaPessoa.Localidade.ToUpper().Contains(city))
+                    pessoasIndex.Add(i);
+
+            return pessoasIndex;
+        }
+
+        //-----------------------------------------------------------
+        private void Update(List<int> indexes, ListBox lista)
         {
             List<string> resultados = new List<string>();
 
             foreach (var index in indexes)
                 resultados.Add(_clube.Pessoas[index].ToString());
 
-            lstResultados.DataSource = resultados;
+            lista.DataSource = resultados;
         }
 
         //-----------------------------------------------------------
@@ -70,41 +95,52 @@ namespace M10_T01_N02_N25
             }
         }
 
+        //-----------------------------------------------------------
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             switch (cboPesquisaPor.SelectedIndex)
             {
+                //-----------------------------------------------------------
                 case 0: //Nome
-                    foreach (var item in Global.ClubeRef.Pessoas)
-                    {
-                        if (item.Nome == txtPesquisaAvancada.Text)
-                        {
-                            resultadoPesquisa.Add(item.ToString());
-                            lstResultadosAvancados.DataSource = resultadoPesquisa;
-                        }
-                    }
+                    Update(SearchByName(Util.RemoveDiacritics(txtPesquisaAvancada.Text).ToUpper()), lstResultadosAvancados);
                     break;
+                //-----------------------------------------------------------
                 case 1: //Rua
+                    Update(SearchByStreet(Util.RemoveDiacritics(txtPesquisaAvancada.Text).ToUpper()), lstResultadosAvancados);
                     break;
+                //-----------------------------------------------------------
                 case 2: //Localidade
+                    Update(SearchByCity(Util.RemoveDiacritics(txtPesquisaAvancada.Text).ToUpper()), lstResultadosAvancados);
                     break;
+                //-----------------------------------------------------------
                 case 3: //Código Postal
                     break;
+                //-----------------------------------------------------------
                 case 4: //Idade
                     break;
+                //-----------------------------------------------------------
                 case 5: //Peso
                     break;
+                //-----------------------------------------------------------
                 case 6: //Número de sócio
                     break;
             }
         }
 
+        //-----------------------------------------------------------
         private void cboPesquisaPor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboPesquisaPor.SelectedIndex == 0)
+            if (cboPesquisaPor.SelectedIndex == 0 || cboPesquisaPor.SelectedIndex == 1 || cboPesquisaPor.SelectedIndex == 2 || cboPesquisaPor.SelectedIndex == 3)
             {
-                //cboComoPesquisar.Visible = false;
-                //txtPesquisaAvancada.Size = Size
+                cboComoPesquisar.Visible = false;
+                txtPesquisaAvancada.Size = new Size(523, 21);
+                txtPesquisaAvancada.Location = new Point(157, 7);
+            }
+            else
+            {
+                cboComoPesquisar.Visible = true;
+                txtPesquisaAvancada.Size = new Size(427, 21);
+                txtPesquisaAvancada.Location = new Point(253, 7);
             }
         }
     }
