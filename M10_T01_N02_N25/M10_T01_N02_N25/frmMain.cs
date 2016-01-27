@@ -32,6 +32,7 @@ namespace M10_T01_N02_N25
         private int _nAtletas;
         private int _nSocios;
         private int _totalPessoasString;
+        private bool _thereChanges = false;
 
         //-----------------------------------------------------------
         public frmMain()
@@ -53,14 +54,20 @@ namespace M10_T01_N02_N25
 
             UpdateLb();
             _pesquisa = new frmPesquisa(ref Clube);
-#if DEBUG
-            btnPesquisa.PerformClick();
-#endif
         }
 
         //-----------------------------------------------------------
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (!_autoSave && _thereChanges)
+            {
+                SystemSounds.Exclamation.Play();
+                var changes = MessageBox.Show("Deseja guardar as alterações no programa?", "Ahiru Club", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (changes == DialogResult.Yes)
+                    saveToolStripMenuItem.PerformClick();
+            }
+
             SystemSounds.Exclamation.Play();
             var result = MessageBox.Show("Tem a certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -122,9 +129,7 @@ namespace M10_T01_N02_N25
                 btnEliminar.Enabled = true;
             }
             if (_autoSave && Clube.Pessoas.Count > 0)
-            {
                 saveToolStripMenuItem.PerformClick();
-            }
             _totalPessoasString = pessoasString.Count();
         }
 
@@ -272,6 +277,7 @@ namespace M10_T01_N02_N25
 
             if (result == DialogResult.OK)
             {
+                _thereChanges = true;
                 if (Clube.Pessoas[lstPessoas.SelectedIndex] is Atleta)
                 {
                     var pess = edit.DadosPessoa;
@@ -296,6 +302,7 @@ namespace M10_T01_N02_N25
         {
             Util.GC_CLEANUP();
             var result = _add.ShowDialog();
+            _thereChanges = true;
             _add.Hide();
         }
 
@@ -368,11 +375,12 @@ namespace M10_T01_N02_N25
             }
             catch { }
             Clube.Pessoas.Remove(Clube.Pessoas[lstPessoas.SelectedIndex]);
+            _thereChanges = true;
             UpdateLb();
         }
 
         #endregion
-        
+
         //-----------------------------------------------------------
         private void lstPessoas_MouseDoubleClick(object sender, MouseEventArgs e)
         {

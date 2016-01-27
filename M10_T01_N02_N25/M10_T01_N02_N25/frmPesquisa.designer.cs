@@ -37,7 +37,6 @@
             this.tbpgPesquisaAvancada = new System.Windows.Forms.TabPage();
             this.lstResultadosAvancados = new System.Windows.Forms.ListBox();
             this.cboComoPesquisar = new System.Windows.Forms.ComboBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisaAvancada = new System.Windows.Forms.TextBox();
             this.cboPesquisaPor = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
@@ -101,7 +100,6 @@
             // 
             this.tbpgPesquisaAvancada.Controls.Add(this.lstResultadosAvancados);
             this.tbpgPesquisaAvancada.Controls.Add(this.cboComoPesquisar);
-            this.tbpgPesquisaAvancada.Controls.Add(this.btnPesquisar);
             this.tbpgPesquisaAvancada.Controls.Add(this.txtPesquisaAvancada);
             this.tbpgPesquisaAvancada.Controls.Add(this.cboPesquisaPor);
             this.tbpgPesquisaAvancada.Location = new System.Drawing.Point(4, 22);
@@ -132,23 +130,15 @@
             this.cboComoPesquisar.Size = new System.Drawing.Size(90, 21);
             this.cboComoPesquisar.TabIndex = 3;
             // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(686, 7);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 21);
-            this.btnPesquisar.TabIndex = 2;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
             // txtPesquisaAvancada
             // 
             this.txtPesquisaAvancada.Location = new System.Drawing.Point(253, 7);
             this.txtPesquisaAvancada.Multiline = true;
             this.txtPesquisaAvancada.Name = "txtPesquisaAvancada";
-            this.txtPesquisaAvancada.Size = new System.Drawing.Size(427, 21);
+            this.txtPesquisaAvancada.Size = new System.Drawing.Size(508, 21);
             this.txtPesquisaAvancada.TabIndex = 1;
+            this.txtPesquisaAvancada.TextChanged += new System.EventHandler(this.txtPesquisaAvancada_TextChanged);
+            this.txtPesquisaAvancada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisaAvancada_KeyPress);
             // 
             // cboPesquisaPor
             // 
@@ -179,7 +169,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPesquisa";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPesquisa_FormClosing);
             this.Load += new System.EventHandler(this.frmPesquisa_Load);
@@ -202,7 +192,6 @@
         private System.Windows.Forms.TabPage tbpgPesquisaAvancada;
         private System.Windows.Forms.TextBox txtPesquisaAvancada;
         private System.Windows.Forms.ComboBox cboPesquisaPor;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.ComboBox cboComoPesquisar;
         private System.Windows.Forms.ListBox lstResultadosAvancados;
     }
