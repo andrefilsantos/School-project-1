@@ -15,9 +15,6 @@ namespace M10_T01_N02_N25
     //-----------------------------------------------------------
     public partial class frmMain : Form
     {
-        //TODO: Redo LOAD code to only show active members
-        //TODO: Insert Benfica athletes
-
         //-----------------------------------------------------------
         public Clube Clube = new Clube();
 
@@ -54,6 +51,7 @@ namespace M10_T01_N02_N25
 
             UpdateLb();
             _pesquisa = new frmPesquisa(ref Clube);
+            lstPessoas.HorizontalScrollbar = true;
         }
 
         //-----------------------------------------------------------
@@ -80,8 +78,8 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void IsDataSet(object sender, EditarEventArgs e)
         {
-
-            var form = (frmEditar)sender;
+            if (_add.DialogResult == DialogResult.Cancel) return;
+            var form = (frmEditar) sender;
 
             if (e.Index == 0)
             {

@@ -62,8 +62,8 @@ namespace M10_T01_N02_N25
                 if (!_isEditar) Selected = Global.ClubeRef.Pessoas.Count;
                 if (File.Exists("ProfilePhotos/" + Selected + ".jpg"))
                 {
-                    //Dispose();
-                    //Util.GC_CLEANUP();
+                    Dispose();
+                    Util.GC_CLEANUP();
                     File.Delete("ProfilePhotos/" + Selected + ".jpg");
                 }
                 var image = new Bitmap(picFotoPerfil.Image);
@@ -81,7 +81,7 @@ namespace M10_T01_N02_N25
                 txtRua.Text = value.MoradaPessoa.Rua;
                 txtLocalidade.Text = value.MoradaPessoa.Localidade;
                 mskCodigoPostal.Text = value.MoradaPessoa.CodigoPostal;
-
+                
                 picFotoPerfil.Image = File.Exists("ProfilePhotos/" + Selected + ".jpg") ? new Bitmap("ProfilePhotos/" + Selected + ".jpg") : new Bitmap("ProfilePhotos/DefaultProfilePhoto.jpg");
             }
         }
@@ -97,6 +97,8 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if(!_isEditar && string.IsNullOrEmpty(txtNome.Text) )
+                MessageBox.Show("Deve introduzir, pelo menos, o nosso do " + cboTipo.SelectedItem + ".");
             Hide();
         }
 

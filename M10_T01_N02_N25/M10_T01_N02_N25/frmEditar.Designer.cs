@@ -196,6 +196,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Image = global::M10_T01_N02_N25.Properties.Resources.cancel;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(410, 240);
