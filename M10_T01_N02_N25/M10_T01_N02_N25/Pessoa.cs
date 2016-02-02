@@ -12,6 +12,8 @@ namespace M10_T01_N02_N25
         private DateTime _dataNas;
         public string Nome { get; set; }
         public Morada MoradaPessoa { get; set; }
+        public bool Active { get; set; }
+        public int IndicePessoa { get; set; }
 
         //-----------------------------------------------------------
         public DateTime DataNasc
@@ -48,18 +50,20 @@ namespace M10_T01_N02_N25
         }
 
         //-----------------------------------------------------------
-        public Pessoa(string _nome, DateTime _dateNasc, Morada _moradaPessoa)
+        public Pessoa(string _nome, DateTime _dateNasc, Morada _moradaPessoa, bool _active, int _indexP)
         {
             Nome = _nome;
             DataNasc = _dateNasc;
             MoradaPessoa = _moradaPessoa; ;
             Idade = CalculaIdade();
+            Active = _active;
+            IndicePessoa = _indexP;
         }
 
         //-----------------------------------------------------------
         public override string ToString()
         {
-            return "[P] " + Nome;
+            return "[P] " + Nome + Active + " (" + IndicePessoa + ")";
         }
 
         //-----------------------------------------------------------
@@ -71,6 +75,8 @@ namespace M10_T01_N02_N25
             var day = Convert.ToInt32(reader.GetAttribute("Dia"));
             MoradaPessoa.Read(reader);
             DataNasc = new DateTime(year, month, day);
+            Active = Convert.ToBoolean(reader.GetAttribute("Active"));
+            IndicePessoa = Convert.ToInt32(reader.GetAttribute("Index"));
             Console.WriteLine(Nome + " \t" + year + " \t" + month + " \t" + day + " \t" + MoradaPessoa.Rua + " \t" + MoradaPessoa.Localidade + " \t" + MoradaPessoa.CodigoPostal);
         }
 
@@ -83,6 +89,8 @@ namespace M10_T01_N02_N25
             writer.WriteAttributeString("Mes", DataNasc.Month.ToString());
             writer.WriteAttributeString("Dia", DataNasc.Day.ToString());
             MoradaPessoa.Write(writer);
+            writer.WriteAttributeString("Active", Active.ToString());
+            writer.WriteAttributeString("Index", IndicePessoa.ToString());
             writer.WriteEndElement();
         }
     }
