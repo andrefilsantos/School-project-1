@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Clube>
-  <Atleta Nome="Engenheiro José Sócrates" Peso="69" Dia="6" Mes="9" Ano="1957" Rua="Nº 33 da rua abade faria" Localidade="Lisboa" CodigoPostoal="1900-003" Active="True" Index="2" />
-  <Socio Nome="Engenheiro Teach Almeida" CodSocio="2" Dia="3" Mes="3" Ano="1166" Rua="Rua das bocas :D" Localidade="Boca land" CodigoPostoal="5050-505" Active="False" Index="3" />
-  <Atleta Nome="Diogo Pais" Peso="0" Dia="29" Mes="6" Ano="1999" Rua="Diogo Street" Localidade="Diogo Lang" CodigoPostoal="3500-541" Active="True" Index="4" />
-  <Socio Nome="Samaris" CodSocio="3" Dia="10" Mes="10" Ano="1998" Rua="Rua do Samaris" Localidade="Samaris Land" CodigoPostoal="1234-566" Active="True" Index="5" />
-  <Socio Nome="Nome dele" CodSocio="4" Dia="12" Mes="12" Ano="1212" Rua="jkpoijhio" Localidade="oihiohjiohj" CodigoPostoal="1212-121" Active="True" Index="6" />
+  <Atleta Nome="Engenheiro José Sócrates" Peso="69" Dia="6" Mes="9" Ano="1957" Rua="Nº 33 da rua abade faria" Localidade="Lisboa" CodigoPostoal="1900-003" />
+  <Socio Nome="Engenheiro Teach Almeida" CodSocio="2" Dia="3" Mes="3" Ano="1166" Rua="Rua das bocas :D" Localidade="Boca land" CodigoPostoal="5050-505" />
+  <Atleta Nome="Diogo" Peso="999" Dia="29" Mes="6" Ano="1999" Rua="Diogo Street" Localidade="Diogo Lang" CodigoPostoal="3500-541" />
+  <Socio Nome="Samaris" CodSocio="3" Dia="10" Mes="10" Ano="1998" Rua="Rua do Samaris" Localidade="Samaris Land" CodigoPostoal="1234-566" />
 </Clube>

@@ -33,7 +33,6 @@ namespace M10_T01_N02_N25
         private int _nSocios;
         private int _totalPessoasString;
         private bool _thereChanges = false;
-        public List<int> Indices = new List<int>();
 
         //-----------------------------------------------------------
         public frmMain()
@@ -55,7 +54,6 @@ namespace M10_T01_N02_N25
 
             UpdateLb();
             _pesquisa = new frmPesquisa(ref Clube);
-            lstPessoas.HorizontalScrollbar = true;
         }
 
         //-----------------------------------------------------------
@@ -87,11 +85,11 @@ namespace M10_T01_N02_N25
 
             if (e.Index == 0)
             {
-                Clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso, true, Global.ClubeRef.Pessoas.Count() + 2));
+                Clube.Add(new Atleta(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, e.Peso));
             }
             else if (e.Index == 1)
             {
-                Clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa, true, Global.ClubeRef.Pessoas.Count() + 2));
+                Clube.Add(new Socio(e.Pessoa.Nome, e.Pessoa.DataNasc, e.Pessoa.MoradaPessoa));
             }
 
             form.ClearField();
@@ -102,19 +100,13 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void UpdateLb()
         {
-            Indices.Clear();
             var pessoasString = new List<string>();
             pessoasString.Clear();
             if (Clube == null) return;
             foreach (var item in Clube.Pessoas)
             {
-                if (item.Active)
-                {
-                    pessoasString.Add(item.ToString());
-                    Indices.Add(item.IndicePessoa);
-                }
+                pessoasString.Add(item.ToString());
             }
-
             lstPessoas.DataSource = pessoasString;
 
             if (pessoasString.Count == 0)
@@ -270,16 +262,15 @@ namespace M10_T01_N02_N25
         {
             Util.GC_CLEANUP();
             string type = null;
-            int indexEditing = Indices[lstPessoas.SelectedIndex] - 2;
-            if (Clube.Pessoas[indexEditing] is Socio)
+            if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
                 type = "socio";
             else
                 type = "atleta";
 
             var edit = new frmEditar("Editar", true, type);
-            edit.Selected = indexEditing;
+            edit.Selected = lstPessoas.SelectedIndex;
             edit.ClearField();
-            edit.DadosPessoa = Clube.Pessoas[indexEditing];
+            edit.DadosPessoa = Clube.Pessoas[lstPessoas.SelectedIndex];
             //var image = new Bitmap(picMFfotoPerfil.Image);
             edit.picFotoPerfil.Image = picMFfotoPerfil.Image;
             var result = edit.ShowDialog();
@@ -287,19 +278,19 @@ namespace M10_T01_N02_N25
             if (result == DialogResult.OK)
             {
                 _thereChanges = true;
-                if (Clube.Pessoas[indexEditing] is Atleta)
+                if (Clube.Pessoas[lstPessoas.SelectedIndex] is Atleta)
                 {
                     var pess = edit.DadosPessoa;
-                    var bystander = new Atleta(pess.Nome, pess.DataNasc, pess.MoradaPessoa, 0, true, indexEditing);
+                    var bystander = new Atleta(pess.Nome, pess.DataNasc, pess.MoradaPessoa, 0);
                     Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
                     UpdateDados(lstPessoas.SelectedIndex);
                 }
-                else if (Clube.Pessoas[indexEditing] is Socio)
+                else if (Clube.Pessoas[lstPessoas.SelectedIndex] is Socio)
                 {
                     var pess = edit.DadosPessoa;
-                    var bystander = new Socio(pess.Nome, pess.DataNasc, pess.MoradaPessoa, true, indexEditing);
-                    Clube.Pessoas[indexEditing] = bystander;
-                    UpdateDados(indexEditing);
+                    var bystander = new Socio(pess.Nome, pess.DataNasc, pess.MoradaPessoa);
+                    Clube.Pessoas[lstPessoas.SelectedIndex] = bystander;
+                    UpdateDados(lstPessoas.SelectedIndex);
                 }
             }
             edit.picFotoPerfil.Image = _defaultProfilePic;
@@ -407,7 +398,7 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void lstPessoas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateDados(Indices[lstPessoas.SelectedIndex] - 2);
+            UpdateDados(lstPessoas.SelectedIndex);
         }
     }
 }
