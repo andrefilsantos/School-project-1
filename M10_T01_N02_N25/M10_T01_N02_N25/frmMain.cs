@@ -232,7 +232,6 @@ namespace M10_T01_N02_N25
         //-----------------------------------------------------------
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.Clear();
             Clube.Pessoas.Clear();
             using (var reader = XmlReader.Create(FilePath))
             {
